@@ -179,7 +179,7 @@ body {
 @media (max-width: 768px) {
   #container {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas: "header" "main";
   }
   #header {
@@ -207,7 +207,16 @@ body {
 }
 
 @media (max-width: 576px) {
+  #container {
+    height: auto;
+  }
+  #main {    
+    overflow-y: hidden;
+  }
   #header {
+    position: sticky;
+    top: -225px; /* A bit hacky to get nav sticky */
+    z-index: 1;
     align-items: initial;
     animation: fadeInDown 1s;
   }
@@ -222,7 +231,7 @@ body {
   #header>nav>label {
     display: block;
     margin-top: 4px;
-    padding: 6px;
+    padding: 8px;
   }
   #header>nav>#nav-check:checked~ul {
     display: block;
@@ -242,6 +251,6 @@ body {
     display: none;
   }
   #header>footer>ul>li {
-    padding: 4px;
+    padding: 6px;
   }
 }
