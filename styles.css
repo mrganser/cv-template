@@ -186,15 +186,14 @@ body {
   }
   #main {
     overflow-y: hidden;
-    scroll-behavior: smooth;
   }
   #main>section>.anchor {
-    top: -52px;
+    top: -46px;
   }
   #header {
     position: sticky;
     /* A bit hacky to get nav sticky */
-    top: -225px;
+    top: -228px;
     z-index: 1;
     flex-direction: column;
     align-items: center;
@@ -228,17 +227,16 @@ body {
   #header>nav>ul>li:first-child {
     border-top: 1px rgba(255, 255, 255, 0.3) solid;
   }
-  #header>nav>label {
+  #header>nav>#nav-burger {
     display: block;
-    margin-top: 4px;
     padding: 8px;
     transition: background-color 0.5s;
     cursor: pointer;
   }
-  #header>nav>label:hover, #header>nav>label:focus {
+  #header>nav>#nav-burger:hover, #header>nav>#nav-burger:focus {
     background-color: rgba(0, 0, 0, 0.50)
   }
-  #header>nav>label>i {
+  #header>nav>#nav-burger>i {
     display: block;
     width: 20px;
     height: 2px;
@@ -246,11 +244,13 @@ body {
     border-radius: 2px;
     margin: 4px auto 4px;
   }
-  #header>nav>#nav-check:checked~ul {
-    display: block;
-  }
   #header>nav>ul {
-    display: none;
+    transition: max-height 0.5s 0.2s;
+    max-height: 0;
+    overflow: hidden;
+  }
+  #header>nav>#nav-burger:focus~ul {
+    max-height: 200px;
   }
   #header>footer>ul>li {
     padding: 0 6px 0;
