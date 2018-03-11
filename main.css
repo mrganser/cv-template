@@ -124,6 +124,17 @@ body {
   display: none;
 }
 
+.card-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  /*align-items: flex-start;*/
+}
+.card-list-item {
+  flex: 1 0 20%;
+  margin: 5px;
+}
+
 .card {
   display: inline-block;
   background-color: white;
@@ -133,6 +144,17 @@ body {
   animation: fadeInUp 1s;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: box-shadow 0.5s;
+}
+
+.card > figure {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0;  
+}
+
+.card > figure:hover {
+  
 }
 
 .card:hover {
