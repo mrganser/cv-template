@@ -1,24 +1,3 @@
-:root {
-  --main: #223545;
-  --background: #FAFAFA;
-  --half-black: rgba(0, 0, 0, 0.5);
-  --third-black: rgba(0, 0, 0, 0.33);
-  --half-white: rgba(255, 255, 255, 0.5);
-  --third-white: rgba(255, 255, 255, 0.33);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  text-rendering: optimizeLegibility;
-}
-
 #container {
   height: 100vh;
   display: grid;
@@ -118,55 +97,6 @@ body {
 #header>footer>ul>li>a:hover, #header>footer>ul>li>a:focus {
   color: white;
   outline: none;
-}
-
-.hidden {
-  display: none;
-}
-
-.card {
-  display: inline-block;
-  background-color: white;
-  border-radius: 2px;
-  padding: 30px;
-  margin-top: 10px;
-  animation: fadeInUp 1s;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  transition: box-shadow 0.5s;
-}
-
-.card-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.card-list-item {
-  padding: 0;
-  flex: 1 1 30%;
-  margin: 5px;
-}
-
-.card-list-item:hover>.card-list-item-figure>img {
-  transform: scale(1.5) rotateZ(-5deg);
-  transition: transform 0.5s ease-in-out 0s;
-}
-
-.card-list-item-figure {
-  /*display: grid; I need to fix small flicker*/
-  overflow: hidden;
-}
-
-.card-list-item-figure>img {
-  width: 100%;
-}
-
-.card-list-item-body {
-  padding: 30px;
-}
-
-.card:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 

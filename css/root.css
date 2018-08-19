@@ -1,0 +1,24 @@
+:root {
+  --main: #223545;
+  --background: #FAFAFA;
+  --half-black: rgba(0, 0, 0, 0.5);
+  --third-black: rgba(0, 0, 0, 0.33);
+  --half-white: rgba(255, 255, 255, 0.5);
+  --third-white: rgba(255, 255, 255, 0.33);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.hidden {
+  display: none;
+}
