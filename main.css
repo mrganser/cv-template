@@ -124,17 +124,6 @@ body {
   display: none;
 }
 
-.card-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  /*align-items: flex-start;*/
-}
-.card-list-item {
-  flex: 1 0 20%;
-  margin: 5px;
-}
-
 .card {
   display: inline-block;
   background-color: white;
@@ -146,65 +135,40 @@ body {
   transition: box-shadow 0.5s;
 }
 
-.card > figure {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  margin: 0;  
+.card-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-.card > figure:hover {
-  
+.card-list-item {
+  padding: 0;
+  flex: 1 1 30%;
+  margin: 5px;
+}
+
+.card-list-item:hover>.card-list-item-figure>img {
+  transform: scale(1.5) rotateZ(-5deg);
+  transition: transform 0.5s ease-in-out 0s;
+}
+
+.card-list-item-figure {
+  /*display: grid; I need to fix small flicker*/
+  overflow: hidden;
+}
+
+.card-list-item-figure>img {
+  width: 100%;
+}
+
+.card-list-item-body {
+  padding: 30px;
 }
 
 .card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-/* Animations */
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: scale3d(.3, .3, .3);
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
 
 /* Media queries */
 
