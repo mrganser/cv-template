@@ -1,3 +1,5 @@
+/* Container div */
+
 #container {
   height: 100vh;
   display: grid;
@@ -5,23 +7,7 @@
   grid-template-areas: "header main";
 }
 
-#main {
-  grid-area: main;
-  background-color: var(--background);
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-
-#main>section {
-  position: relative;
-  margin-top: 10px;
-  padding: 10px;
-}
-
-#main>section>.anchor {
-  position: absolute;
-  top: -10px;
-}
+/* Header section */
 
 #header {
   grid-area: header;
@@ -97,6 +83,26 @@
 #header>footer>ul>li>a:hover, #header>footer>ul>li>a:focus {
   color: white;
   outline: none;
+}
+
+/* Main section */
+
+#main {
+  grid-area: main;
+  background-color: var(--background);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+#main>section {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#main>section>.anchor {
+  position: absolute;
+  top: -10px;
 }
 
 
