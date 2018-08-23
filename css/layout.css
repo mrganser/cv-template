@@ -3,7 +3,7 @@
 #container {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-areas: "header main";
 }
 
@@ -22,7 +22,7 @@
 
 #header>header {
   flex: 2 0 0;
-  margin: 10px;
+  padding: 30px 10px;
 }
 
 #header>header>#title {
@@ -92,6 +92,7 @@
   background-color: var(--background);
   overflow-y: scroll;
   scroll-behavior: smooth;
+  padding: 20px 80px;
 }
 
 #main>section {
@@ -108,23 +109,17 @@
 
 /* Media queries */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #container {
     height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: "header" "main";
   }
-  #main {
-    overflow-y: hidden;
-  }
-  #main>section>.anchor {
-    top: -46px;
-  }
   #header {
     position: sticky;
     /* A bit hacky to get nav sticky */
-    top: -228px;
+    top: -268px;
     z-index: 1;
     flex-direction: column;
     align-items: center;
@@ -143,6 +138,13 @@
   }
   #header>footer {
     order: 2;
+  }
+  #main {
+    overflow-y: hidden;
+    padding: 40px;
+  }
+  #main>section>.anchor {
+    top: -46px;
   }
 }
 
@@ -185,5 +187,8 @@
   }
   #header>footer>ul>li {
     padding: 0 6px 0;
+  }
+  #main {
+    padding: 10px;
   }
 }
