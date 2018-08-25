@@ -9,6 +9,10 @@
   transition: box-shadow 0.5s;
 }
 
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 .card-list {
   display: flex;
   flex-flow: row wrap;
@@ -16,29 +20,32 @@
 }
 
 .card-list-item {
-  padding: 0;
   flex: 1 1 30%;
+  padding: 0;
   margin: 5px;
 }
 
-.card-list-item:hover>.card-list-item-figure>img {
-  transform: scale(1.5) rotateZ(-5deg);
-  transition: transform 0.5s ease-in-out 0s;
-}
-
 .card-list-item-figure {
-  /*display: grid; I need to fix small flicker*/
+  width: 100%;
   overflow: hidden;
 }
 
 .card-list-item-figure>img {
+  transition: transform 1s ease;
   width: 100%;
+  /* Avoid flickering */
+  backface-visibility: hidden;
+}
+
+.card-list-item-figure:hover>img {
+  transform: scale(1.25) rotateZ(-5deg);
+}
+
+.card-list-item-figure>img {
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 .card-list-item-body {
   padding: 30px;
-}
-
-.card:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
