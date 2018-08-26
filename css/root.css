@@ -1,6 +1,6 @@
 :root {
   --main: #223545;
-  --background: #FAFAFA;
+  --background: #fafafa;
   --half-black: rgba(0, 0, 0, 0.5);
   --third-black: rgba(0, 0, 0, 0.33);
   --half-white: rgba(255, 255, 255, 0.5);
@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-rendering: optimizeLegibility;
 }
 

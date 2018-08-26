@@ -30,18 +30,18 @@
   overflow: hidden;
 }
 
-.card-list-item-figure>img {
+.card-list-item-figure > img {
   transition: transform 1s ease;
   width: 100%;
   /* Avoid flickering */
   backface-visibility: hidden;
 }
 
-.card-list-item-figure:hover>img {
+.card-list-item-figure:hover > img {
   transform: scale(1.25) rotateZ(-5deg);
 }
 
-.card-list-item-figure>img {
+.card-list-item-figure > img {
   max-width: 100%;
   vertical-align: middle;
 }

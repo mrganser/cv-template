@@ -20,37 +20,37 @@
   animation: fadeInRight 1s both;
 }
 
-#header>header {
+#header > header {
   flex: 2 0 0;
   padding: 30px 10px;
 }
 
-#header>header>#title {
+#header > header > #title {
   margin: 10px;
   animation: fadeInDown 1s 0.5s both;
 }
 
-#header>header>img {
+#header > header > img {
   height: 100px;
   width: 100px;
   border-radius: 50%;
   animation: appear 1s 0.5s both;
 }
 
-#header>nav {
+#header > nav {
   flex: 4 0 0;
 }
 
-#header>nav>ul>li {
+#header > nav > ul > li {
   border-top: 1px solid var(--third-white);
   list-style-type: none;
 }
 
-#header>nav>ul>li:first-child {
+#header > nav > ul > li:first-child {
   border-top: none;
 }
 
-#header>nav>ul>li>a {
+#header > nav > ul > li > a {
   display: block;
   padding: 10px;
   color: white;
@@ -58,29 +58,31 @@
   transition: background-color 0.5s;
 }
 
-#header>nav>ul>li>a:hover, #header>nav>ul>li>a:focus {
+#header > nav > ul > li > a:hover,
+#header > nav > ul > li > a:focus {
   background-color: var(--half-black);
   outline: none;
 }
 
-#header>footer {
+#header > footer {
   flex: 1 0 0;
   margin: 4px auto;
   font-size: 1.2em;
 }
 
-#header>footer>ul>li {
+#header > footer > ul > li {
   list-style-type: none;
   float: left;
   padding: 0 10px 0;
 }
 
-#header>footer>ul>li>a {
+#header > footer > ul > li > a {
   color: var(--half-white);
   transition: color 0.5s;
 }
 
-#header>footer>ul>li>a:hover, #header>footer>ul>li>a:focus {
+#header > footer > ul > li > a:hover,
+#header > footer > ul > li > a:focus {
   color: white;
   outline: none;
 }
@@ -95,17 +97,16 @@
   padding: 20px 80px;
 }
 
-#main>section {
+#main > section {
   position: relative;
   margin-top: 10px;
   padding: 10px;
 }
 
-#main>section>.anchor {
+#main > section > .anchor {
   position: absolute;
   top: -10px;
 }
-
 
 /* Media queries */
 
@@ -125,25 +126,25 @@
     align-items: center;
     animation: fadeInDown 1s;
   }
-  #header>header {
+  #header > header {
     order: 1;
   }
-  #header>nav {
+  #header > nav {
     margin-top: 4px;
     order: 3;
   }
-  #header>nav>ul>li {
+  #header > nav > ul > li {
     float: left;
     border-top: none;
   }
-  #header>footer {
+  #header > footer {
     order: 2;
   }
   #main {
     overflow-y: hidden;
     padding: 40px;
   }
-  #main>section>.anchor {
+  #main > section > .anchor {
     top: -46px;
   }
 }
@@ -153,23 +154,24 @@
     align-items: initial;
     animation: fadeInDown 1s;
   }
-  #header>nav>ul>li {
+  #header > nav > ul > li {
     float: none;
     border-top: 1px solid var(--third-white);
   }
-  #header>nav>ul>li:first-child {
+  #header > nav > ul > li:first-child {
     border-top: 1px solid var(--third-white);
   }
-  #header>nav>#nav-burger {
+  #header > nav > #nav-burger {
     display: block;
     padding: 8px;
     transition: background-color 0.5s;
     cursor: pointer;
   }
-  #header>nav>#nav-burger:hover, #header>nav>#nav-burger:focus {
+  #header > nav > #nav-burger:hover,
+  #header > nav > #nav-burger:focus {
     background-color: var(--half-black);
   }
-  #header>nav>#nav-burger>i {
+  #header > nav > #nav-burger > i {
     display: block;
     width: 20px;
     height: 2px;
@@ -177,15 +179,15 @@
     border-radius: 2px;
     margin: 4px auto 4px;
   }
-  #header>nav>ul {
+  #header > nav > ul {
     transition: max-height 0.5s 0.2s;
     max-height: 0;
     overflow: hidden;
   }
-  #header>nav>#nav-burger:focus~ul {
+  #header > nav > #nav-burger:focus ~ ul {
     max-height: 200px;
   }
-  #header>footer>ul>li {
+  #header > footer > ul > li {
     padding: 0 6px 0;
   }
   #main {

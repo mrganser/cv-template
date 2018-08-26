@@ -9,7 +9,7 @@
 /* The actual timeline (the vertical ruler) */
 
 .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 6px;
   background-color: var(--main);
@@ -32,7 +32,7 @@
 /* The circles on the timeline */
 
 .timeline-element::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 24px;
   height: 24px;
@@ -134,14 +134,16 @@
     padding-right: 25px;
   }
   /* Make sure that all arrows are pointing leftwards */
-  .timeline-element:nth-child(odd)::before, .timeline-element:nth-child(even)::before {
+  .timeline-element:nth-child(odd)::before,
+  .timeline-element:nth-child(even)::before {
     left: 60px;
     border: medium solid var(--main);
     border-width: 10px 10px 10px 0;
     border-color: transparent var(--main) transparent transparent;
   }
   /* Make sure all circles are at the same spot */
-  .timeline-element:nth-child(odd)::after, .timeline-element:nth-child(even)::after {
+  .timeline-element:nth-child(odd)::after,
+  .timeline-element:nth-child(even)::after {
     left: 19px;
   }
   /* Make all right containers behave like the left ones */
