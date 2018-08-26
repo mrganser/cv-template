@@ -1,5 +1,6 @@
 .card {
-  display: inline-block;
+  display: block;
+  width: 100%;
   background-color: white;
   border-radius: 2px;
   padding: 30px;
@@ -17,6 +18,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  margin: -4px;
 }
 
 .card-list-item {

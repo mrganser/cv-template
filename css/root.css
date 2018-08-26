@@ -3,6 +3,7 @@
   --background: #fafafa;
   --half-black: rgba(0, 0, 0, 0.5);
   --third-black: rgba(0, 0, 0, 0.33);
+  --light-black: rgba(0, 0, 0, 0.2);
   --half-white: rgba(255, 255, 255, 0.5);
   --third-white: rgba(255, 255, 255, 0.33);
 }
