@@ -92,3 +92,14 @@
 .card-list-item-body {
   padding: 30px;
 }
+
+.card-list-item-body > .card-footer {
+  border-top: 1px solid var(--light-black);
+  margin-top: 16px;
+  padding-top: 4px;
+}
+
+.card-list-item-body > .card-footer > .technologies > * {
+  color: var(--main);
+  margin: 4px 4px 0 4px;
+}
