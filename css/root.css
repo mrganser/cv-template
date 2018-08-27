@@ -23,3 +23,10 @@ body {
 .hidden {
   display: none;
 }
+
+#stack-overflow-link:hover:after {
+  display: block;
+  position: absolute;
+  content: url(https://stackoverflow.com/users/flair/22656.png);
+  animation: appear 0.5s 0s;
+}
