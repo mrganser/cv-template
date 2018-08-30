@@ -18,18 +18,18 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 6px -4px -4px -4px;
+  margin: 6px -20px -20px -20px;
 }
 
 .card-list-item {
-  flex: 0 0 calc(33.33% - 8px);
+  flex: 0 0 calc(33.33% - 40px);
   padding: 0;
-  margin: 4px;
+  margin: 20px;
 }
 
 @media (max-width: 1024px) {
   .card-list-item {
-    flex: 0 0 calc(50% - 8px);
+    flex: 0 0 calc(50% - 40px);
   }
 }
 

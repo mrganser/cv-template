@@ -22,7 +22,6 @@
 /* Container around content */
 
 .timeline-element {
-  padding: 10px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -46,12 +45,14 @@
 /* Place the container to the left */
 
 .timeline-element:nth-child(odd) {
+  padding: 10px 40px 10px 0;
   left: 0;
 }
 
 /* Place the container to the right */
 
 .timeline-element:nth-child(even) {
+  padding: 10px 0 10px 40px;
   left: 50%;
 }
 
@@ -130,8 +131,6 @@
   /* Full-width containers */
   .timeline-element {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
   }
   /* Make sure that all arrows are pointing leftwards */
   .timeline-element:nth-child(odd)::before,
@@ -147,7 +146,9 @@
     left: 19px;
   }
   /* Make all right containers behave like the left ones */
-  .timeline-element:nth-child(even) {
+  .timeline-element:nth-child(even),
+  .timeline-element:nth-child(odd) {
     left: 0%;
+    padding: 0 0 40px 70px;
   }
 }

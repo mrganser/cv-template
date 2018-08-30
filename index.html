@@ -12,12 +12,16 @@
 </head>
 
 <body>
+    <p id="doNotUseIE" class="doNotUseIE">You are using an <strong>incompatible browser</strong>. Please consider using other
+        browsers to improve your experience.</p>
     <div id="container">
         <section id="header">
             <header>
                 <div id="title">
-                    <h1>My Name</h1>
-                    <h4>My job</h4>
+                    <h1>Your name</h1>
+                </div>
+                <div id="subtitle">
+                    <h4>Your job</h4>
                 </div>
                 <img src="img/avatar.png" alt="Avatar">
             </header>
@@ -368,7 +372,13 @@
                 </div>
             </section>
         </div>
-    </div>
+    </div>    
+    <script>
+        //Show warning message on IE browser
+        if (navigator.userAgent.indexOf("MSIE ") > -1 || navigator.userAgent.indexOf("Trident") > -1) {
+            document.getElementById("doNotUseIE").style.display = "block";
+        }
+    </script>
 </body>
 
 </html>

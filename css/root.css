@@ -30,3 +30,11 @@ body {
   content: url(https://stackoverflow.com/users/flair/22656.png);
   animation: appear 0.5s 0s;
 }
+
+.doNotUseIE {
+  display: none;
+  padding: 20px;
+  background-color: #f44336; 
+  color: white;
+  margin-bottom: 15px;
+}

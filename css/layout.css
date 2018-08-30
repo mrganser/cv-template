@@ -30,7 +30,17 @@
   animation: fadeInDown 1s 0.5s both;
 }
 
+#header > header > #subtitle {
+  margin: 10px;
+  animation: fadeInDown 1s 0.5s both;
+}
+
+#header > header > #subtitle > h4 {
+  font-weight: normal;
+}
+
 #header > header > img {
+  margin-top: 10px;
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -120,7 +130,7 @@
   #header {
     position: sticky;
     /* A bit hacky to get nav sticky */
-    top: -268px;
+    top: -288px;
     z-index: 1;
     flex-direction: column;
     align-items: center;
@@ -145,6 +155,7 @@
     padding: 40px;
   }
   #main > section > .anchor {
+    /* Anchor above to avoid collision with menu */
     top: -46px;
   }
 }
