@@ -106,13 +106,17 @@
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-/* Title */
+/* Title and subtitle */
 
 .timeline-title {
   border-radius: 2px 2px 0 0;
   padding: 20px 30px;
   color: white;
   background-color: var(--main);
+}
+
+.timeline-subtitle {
+  font-weight: bold;
 }
 
 /* Body */

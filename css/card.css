@@ -14,6 +14,10 @@
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+.card-title {
+  margin-bottom: 4px;
+}
+
 .card-list {
   display: flex;
   flex-flow: row wrap;
@@ -41,12 +45,14 @@
 
 .card-list-item-figure {
   width: 100%;
+  height: 33%;
   overflow: hidden;
   position: relative;
 }
 
 .card-list-item-figure > img {
   transition: transform 1s ease;
+  vertical-align: middle;
   width: 100%;
   /* Avoid flickering */
   backface-visibility: hidden;
@@ -54,11 +60,6 @@
 
 .card-list-item-figure:hover > img {
   transform: scale(1.25);
-}
-
-.card-list-item-figure > img {
-  max-width: 100%;
-  vertical-align: middle;
 }
 
 .card-list-item-figure > figcaption {
