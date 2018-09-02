@@ -38,6 +38,9 @@
 }
 
 @media (max-width: 576px) {
+  .card-list {
+    margin: 0;
+  }
   .card-list-item {
     flex: 0 0 100%;
   }
@@ -45,7 +48,7 @@
 
 .card-list-item-figure {
   width: 100%;
-  height: 33%;
+  height: auto;
   overflow: hidden;
   position: relative;
 }
