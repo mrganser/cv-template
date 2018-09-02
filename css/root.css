@@ -1,5 +1,6 @@
 :root {
   --main: #223545;
+  --secondary: #007E7E;
   --background: #fafafa;
   --half-black: rgba(0, 0, 0, 0.5);
   --third-black: rgba(0, 0, 0, 0.33);
@@ -23,6 +24,12 @@ body {
 
 .hidden {
   display: none;
+}
+
+.highlight {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: var(--main);
 }
 
 #stack-overflow-link:hover:after {

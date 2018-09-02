@@ -3,8 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Name</title>
+    <meta name="description" content="Welcome to my Portfolio webpage. Check out my work here!">
+    <meta name="author" content="me">
+    <title>me · Portfolio</title>
+    <link rel="icon" type="image/png" href='favicon.png'>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
@@ -23,7 +27,7 @@
                 <div id="subtitle">
                     <h4>Your job</h4>
                 </div>
-                <img src="img/avatar.png" alt="Avatar">
+                <img src="img/logo.png" alt="Logo">
             </header>
             <nav>
                 <div id="nav-burger" tabindex="0">
@@ -85,9 +89,9 @@
         <div id="main">
             <section id="about-section">
                 <i id="about" class="anchor"></i>
-                <h1>About me</h1>
+                <h1 class="section-title"><i class="fas fa-user-circle"></i> About me</h1>
                 <div class="card">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    <p><span class="highlight">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
                         dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
@@ -96,7 +100,7 @@
             </section>
             <section id="skills-section">
                 <i id="skills" class="anchor"></i>
-                <h1>Skills</h1>
+                <h1 class="section-title"><i class="fas fa-desktop"></i> Skills</h1>
                 <div class="card-list">
                     <div class="card card-list-item">
                         <div class="card-list-item-body">
@@ -165,7 +169,7 @@
             </section>
             <section id="portfolio-section">
                 <i id="portfolio" class="anchor"></i>
-                <h1>Portfolio</h1>
+                <h1 class="section-title"><i class="fas fa-clipboard-list"></i> Portfolio</h1>
                 <div class="card-list">
                     <div class="card card-list-item">
                         <figure class="card-list-item-figure">
@@ -301,15 +305,19 @@
             </section>
             <section id="experience-section">
                 <i id="experience" class="anchor"></i>
-                <h1>Experience</h1>
+                <h1 class="section-title"><i class="fas fa-briefcase"></i> Experience</h1>
                 <ul class="timeline">
                     <li class="timeline-element">
                         <div class="timeline-content">
                             <h3 class="timeline-title">Lorem</h3>
                             <div class="timeline-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo c
+                                <p class="timeline-subtitle">
+                                    Lorem ipsum dolor sit amet
+                                    <br><i>Month Year - Present</i>
+                                </p>
+                                <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo
                             </div>
                         </div>
                     </li>
@@ -317,19 +325,13 @@
                         <div class="timeline-content">
                             <h3 class="timeline-title">Lorem</h3>
                             <div class="timeline-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo c
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-element">
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">Lorem</h3>
-                            <div class="timeline-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo c
+                                <p class="timeline-subtitle">
+                                    Lorem ipsum dolor sit amet
+                                    <br><i>Month Year - Month Year</i>
+                                </p>
+                                <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo
                             </div>
                         </div>
                     </li>
@@ -337,15 +339,19 @@
             </section>
             <section id="education-section">
                 <i id="education" class="anchor"></i>
-                <h1>Education</h1>
+                <h1 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h1>
                 <ul class="timeline">
                     <li class="timeline-element">
                         <div class="timeline-content">
                             <h3 class="timeline-title">Lorem</h3>
                             <div class="timeline-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo c
+                                <p class="timeline-subtitle">
+                                    Lorem ipsum dolor sit amet
+                                    <br><i>Month Year - Month Year</i>
+                                </p>
+                                <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo
                             </div>
                         </div>
                     </li>
@@ -353,9 +359,13 @@
                         <div class="timeline-content">
                             <h3 class="timeline-title">Lorem</h3>
                             <div class="timeline-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo c
+                                <p class="timeline-subtitle">
+                                    Lorem ipsum dolor sit amet
+                                    <br><i>Month Year - Month Year</i>
+                                </p>
+                                <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo
                             </div>
                         </div>
                     </li>
@@ -363,16 +373,34 @@
                         <div class="timeline-content">
                             <h3 class="timeline-title">Lorem</h3>
                             <div class="timeline-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo c
+                                <p class="timeline-subtitle">
+                                    Lorem ipsum dolor sit amet
+                                    <br><i>Month Year - Month Year</i>
+                                </p>
+                                <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-element">
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Lorem</h3>
+                            <div class="timeline-body">
+                                <p class="timeline-subtitle">
+                                    Lorem ipsum dolor sit amet
+                                    <br><i>Month Year - Month Year</i>
+                                </p>
+                                <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo
                             </div>
                         </div>
                     </li>
                 </ul>
             </section>
         </div>
-    </div>    
+    </div>
     <script>
         //Show warning message on IE browser
         if (navigator.userAgent.indexOf("MSIE ") > -1 || navigator.userAgent.indexOf("Trident") > -1) {
