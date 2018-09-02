@@ -193,7 +193,6 @@
     transition: background-color 0.5s;
     cursor: pointer;
   }
-  /*FIXME: Strange behaviour in Firefox/Edge*/
   #header > nav > #nav-burger:hover,
   #header > nav > #nav-burger:focus {
     background-color: var(--half-black);
@@ -210,6 +209,10 @@
     transition: max-height 0.5s 0.2s;
     max-height: 0;
     overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--main);
+    width: 100%;
   }
   #header > nav > #nav-burger:focus ~ ul {
     max-height: 300px;

@@ -39,7 +39,6 @@
   background-color: var(--main);
   top: 15px;
   border-radius: 50%;
-  z-index: 1;
 }
 
 /* Place the container to the left */
@@ -64,7 +63,6 @@
   position: absolute;
   top: 17px;
   width: 0;
-  z-index: 1;
   right: 30px;
   border: medium solid var(--main);
   border-width: 10px 0 10px 10px;
@@ -79,7 +77,6 @@
   position: absolute;
   top: 17px;
   width: 0;
-  z-index: 1;
   left: 30px;
   border: medium solid var(--main);
   border-width: 10px 10px 10px 0;
