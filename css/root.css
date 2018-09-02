@@ -35,7 +35,7 @@ body {
 #stack-overflow-link:hover:after {
   display: block;
   position: absolute;
-  content: url(https://stackoverflow.com/users/flair/22656.png);
+  content: url(https://stackoverflow.com/users/flair/4056222.png);
   animation: appear 0.5s 0s;
 }
 

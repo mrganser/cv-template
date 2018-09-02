@@ -41,9 +41,8 @@
 
 #header > header > img {
   margin-top: 10px;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  height: 200px;
+  width: 200px;
   animation: appear 1s 0.5s both;
 }
 
