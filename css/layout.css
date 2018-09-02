@@ -196,7 +196,7 @@
     overflow: hidden;
   }
   #header > nav > #nav-burger:focus ~ ul {
-    max-height: 200px;
+    max-height: 300px;
   }
   #header > footer > ul > li {
     padding: 0 6px 0;
