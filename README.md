@@ -48,13 +48,13 @@ This project is ready to deploy anywhere as there are only .html, .css and image
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/mrganser/chatterbox/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/mrganser/cv-template/tags). 
 
 ## Authors
 
 * **[mrganser](http://mrganser.com)**
 
-See also the list of [contributors](https://github.com/mrganser/chatterboxt/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/mrganser/cv-template/contributors) who participated in this project.
 
 ## License
 
