@@ -6,7 +6,9 @@ Just edit the index.html with your data and adjust the CSS if you want to. Check
 
 ## Demo (my own)
 
-http://mrganser.com
+http://mrganser.com - My version is on [me](https://github.com/mrganser/cv-template/tree/me) branch if you want to check it out.
+
+### Template screenshots
 
 * Main page:
 

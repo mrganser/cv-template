@@ -1,6 +1,6 @@
 :root {
   --main: #223545;
-  --secondary: #007E7E;
+  --secondary: #007e7e;
   --background: #fafafa;
   --half-black: rgba(0, 0, 0, 0.5);
   --third-black: rgba(0, 0, 0, 0.33);
@@ -42,7 +42,7 @@ body {
 .doNotUseIE {
   display: none;
   padding: 20px;
-  background-color: #f44336; 
+  background-color: #f44336;
   color: white;
   margin-bottom: 15px;
 }
