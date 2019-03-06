@@ -10,15 +10,15 @@ http://mrganser.com - My version is on [me](https://github.com/mrganser/cv-templ
 
 ### Template screenshots
 
-* Main page:
+* Main page (desktop):
 
 <img src="demo/demo1.png" width="750">
 
-* Tablets size:
+* Tablets:
 
 <img src="demo/demo2.png" width="550">
 
-* Mobiles size:
+* Mobiles:
 
 <img src="demo/demo3.png" width="450">
 
