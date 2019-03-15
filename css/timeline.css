@@ -6,8 +6,6 @@
   animation: fadeInUp 1s;
 }
 
-/* The actual timeline (the vertical ruler) */
-
 .timeline::after {
   content: "";
   position: absolute;

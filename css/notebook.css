@@ -1,0 +1,32 @@
+.notebook {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  margin: 20px auto 0;
+  animation: fadeInUp 1s;
+}
+
+.notebook > .notebook-year {
+  color: var(--main);
+  border-right: 3px solid var(--main);
+  padding: 20px 0 20px;
+}
+
+.notebook > .notebook-cert {
+  padding: 20px 0 20px 54px;
+}
+
+@media (max-width: 768px) {
+  .notebook {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .notebook > .notebook-year {
+    color: var(--main);
+    border-right: 2px solid var(--main);
+    padding: 20px 0 20px;
+  }
+
+  .notebook > .notebook-cert {
+    padding: 20px 0 20px 16px;
+  }
+}
