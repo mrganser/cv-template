@@ -146,7 +146,7 @@
   #header {
     position: sticky;
     /* A bit hacky to get nav sticky */
-    top: -261px;
+    top: -283px;
     z-index: 1;
     flex-direction: column;
     align-items: center;
