@@ -8,11 +8,11 @@
 .notebook > .notebook-year {
   color: var(--main);
   border-right: 3px solid var(--main);
-  padding: 20px 0 20px;
+  padding: 10px 0 10px;
 }
 
 .notebook > .notebook-cert {
-  padding: 20px 0 20px 54px;
+  padding: 10px 0 10px 54px;
 }
 
 @media (max-width: 768px) {
@@ -23,10 +23,10 @@
   .notebook > .notebook-year {
     color: var(--main);
     border-right: 2px solid var(--main);
-    padding: 20px 0 20px;
+    padding: 10px 0 10px;
   }
 
   .notebook > .notebook-cert {
-    padding: 20px 0 20px 16px;
+    padding: 10px 0 10px 16px;
   }
 }
