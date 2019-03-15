@@ -180,6 +180,7 @@
   #header {
     align-items: initial;
     animation: fadeInDown 1s;
+    overflow: visible;
   }
   #header > nav > ul > li {
     float: none;
