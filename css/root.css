@@ -46,3 +46,24 @@ body {
   color: white;
   margin-bottom: 15px;
 }
+
+/* Scrollbar */
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--light-black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--third-black);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--half-black);
+}
