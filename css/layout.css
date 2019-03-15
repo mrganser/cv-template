@@ -42,8 +42,8 @@
 
 #header > header img {
   margin-top: 10px;
-  height: 200px;
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   animation: appear 1s 0.5s both;
 }
 
