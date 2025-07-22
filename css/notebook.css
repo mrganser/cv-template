@@ -2,16 +2,15 @@
   display: grid;
   grid-template-columns: 100px 1fr;
   margin: 20px auto 0;
-  animation: fadeInUp 1s;
 }
 
-.notebook > .notebook-year {
-  color: var(--main);
-  border-right: 3px solid var(--main);
+.notebook>.notebook-year {
+  color: var(--secondary);
+  border-right: 3px solid var(--secondary);
   padding: 10px 0 10px;
 }
 
-.notebook > .notebook-cert {
+.notebook>.notebook-cert {
   padding: 10px 0 10px 54px;
 }
 
@@ -20,13 +19,13 @@
     grid-template-columns: 60px 1fr;
   }
 
-  .notebook > .notebook-year {
-    color: var(--main);
-    border-right: 2px solid var(--main);
+  .notebook>.notebook-year {
+    color: var(--secondary);
+    border-right: 2px solid var(--secondary);
     padding: 10px 0 10px;
   }
 
-  .notebook > .notebook-cert {
+  .notebook>.notebook-cert {
     padding: 10px 0 10px 16px;
   }
 }

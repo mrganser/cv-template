@@ -1,17 +1,15 @@
 .card {
   display: block;
   width: 100%;
-  background-color: white;
   border-radius: 2px;
   padding: 30px;
   margin-top: 26px;
-  animation: fadeInUp 1s;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px var(--shadows), 0 3px 6px var(--shadows);
   transition: box-shadow 0.5s;
 }
 
 .card:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px var(--shadows), 0 10px 10px var(--shadows);
 }
 
 .card-title {
@@ -21,7 +19,6 @@
 .card-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
   margin: 6px -20px -20px -20px;
 }
 
@@ -41,8 +38,10 @@
   .card-list {
     margin: 0;
   }
+
   .card-list-item {
     flex: 0 0 100%;
+    margin: 20px 0;
   }
 }
 
@@ -53,7 +52,7 @@
   position: relative;
 }
 
-.card-list-item-figure > img {
+.card-list-item-figure>img {
   transition: transform 1s ease;
   vertical-align: middle;
   width: 100%;
@@ -61,49 +60,46 @@
   backface-visibility: hidden;
 }
 
-.card-list-item-figure:hover > img {
+.card-list-item-figure:hover>img {
   transform: scale(1.25);
 }
 
-.card-list-item-figure > figcaption {
+.card-list-item-figure>figcaption {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 20%;
+  top: 0.5rem;
+  right: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
   background-color: var(--half-black);
-  visibility: hidden;
 }
 
-.card-list-item-figure:hover > figcaption {
-  visibility: visible;
-  animation: fadeInRight 1s 0s;
-}
-
-.card-list-item-figure > figcaption > a {
+.card-list-item-figure>figcaption>a {
   display: block;
   width: 100%;
   height: 100%;
-  color: white;
+  color: #fff;
   text-decoration: none;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 0.2rem;
 }
 
 .card-list-item-body {
   padding: 30px;
 }
 
-.card-list-item-body > .card-footer {
-  border-top: 1px solid var(--light-black);
+.card-list-item-body>.card-footer {
+  border-top: 1px solid var(--secondary);
   margin-top: 16px;
   padding-top: 4px;
 }
 
-.card-list-item-body > .card-footer > .technologies > * {
-  color: var(--main);
-  margin: 4px 4px 0 4px;
+.card-list-item-body>.card-footer>.technologies {
+  color: var(--secondary);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.5rem;
+  flex-wrap: wrap;
 }

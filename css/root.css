@@ -1,12 +1,30 @@
 :root {
-  --main: #223545;
+  --primary: #223545;
   --secondary: #007e7e;
   --background: #fafafa;
   --half-black: rgba(0, 0, 0, 0.5);
-  --third-black: rgba(0, 0, 0, 0.33);
   --light-black: rgba(0, 0, 0, 0.2);
-  --half-white: rgba(255, 255, 255, 0.5);
-  --third-white: rgba(255, 255, 255, 0.33);
+  --contrast: #fff;
+  --shadows: rgba(0, 0, 0, 0.2);
+  --text-color: #000;
+}
+
+/* Light mode */
+:root:has(#darkmode-switch:not:checked) {
+  --secondary: #007e7e;
+  --background: #fafafa;
+  --contrast: #fff;
+  --shadows: rgba(0, 0, 0, 0.2);
+  --text-color: #000;
+}
+
+/* Dark mode */
+:root:has(#darkmode-switch:checked) {
+  --secondary: #f8ce0d;
+  --background: #181a1b;
+  --contrast: #181a1b;
+  --shadows: #fff;
+  --text-color: #fff;
 }
 
 * {
@@ -16,10 +34,26 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
 body {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.5em;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5rem;
   text-rendering: optimizeLegibility;
+  color: var(--text-color);
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .hidden {
@@ -29,7 +63,7 @@ body {
 .highlight {
   font-size: 2.5em;
   font-weight: bold;
-  color: var(--main);
+  color: var(--secondary);
 }
 
 #stack-overflow-link:hover:after {
@@ -39,31 +73,78 @@ body {
   animation: appear 0.5s 0s;
 }
 
-.doNotUseIE {
-  display: none;
-  padding: 20px;
-  background-color: #f44336;
-  color: white;
-  margin-bottom: 15px;
+/* Dark mode icon switch styles */
+.darkmode-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  height: 28px;
+  justify-content: center;
 }
 
-/* Scrollbar */
-/* Width */
-::-webkit-scrollbar {
-  width: 10px;
+.darkmode-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
+.icon-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: var(--light-black);
+  border-radius: 16px;
+  height: 24px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 2px 4px;
+  gap: 0.2rem;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--third-black);
+.icon-switch:hover .icon-sun,
+.icon-switch:focus .icon-sun,
+.icon-switch:hover .icon-moon,
+.icon-switch:focus .icon-moon {
+  color: var(--secondary);
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--half-black);
+.icon-switch .icon-sun,
+.icon-switch .icon-moon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: color 0.5s, opacity 0.3s, transform 0.3s;
+}
+
+.icon-switch .icon-sun {
+  opacity: 1;
+  z-index: 2;
+}
+
+.icon-switch .icon-moon {
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.darkmode-toggle input:checked~.icon-switch .icon-sun {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.darkmode-toggle input:checked~.icon-switch .icon-moon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.darkmode-toggle input:checked~.icon-switch {
+  color: #fff;
+}
+
+/* Style links with secondary color */
+a,
+a:visited {
+  color: var(--secondary);
 }

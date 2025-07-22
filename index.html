@@ -1,564 +1,715 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Welcome to my Portfolio webpage. Check out my work here!"
-    />
-    <meta name="author" content="mrganser" />
-    <meta
-      name="google-site-verification"
-      content="9OHXIAHgYE5on3YTlbmsiPq3yivOTlc55EPEVbcoU5I"
-    />
-    <title>mrganser · Portfolio</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
-      integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <p id="doNotUseIE" class="doNotUseIE">
-      You are using an <strong>incompatible browser</strong>. Please consider
-      using other browsers to improve your experience.
-    </p>
-    <div id="container">
-      <section id="header">
-        <header>
-          <a href="/">
-            <img alt="mrganser - Senior software engineer" src="img/logo.png" />
-          </a>
-        </header>
-        <nav>
-          <div id="nav-burger" tabindex="0">
-            <i></i>
-            <i></i>
-            <i></i>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Welcome to my Portfolio webpage. Check out my work here!" />
+  <meta name="author" content="mrganser" />
+  <meta name="google-site-verification" content="9OHXIAHgYE5on3YTlbmsiPq3yivOTlc55EPEVbcoU5I" />
+  <title>mrganser · Portfolio</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+      <div id="header-inner">
+        <a href="/" class="logo-link">
+          <img alt="mrganser - Principal software engineer" src="img/logo.png" />
+          <h1>
+            mrganser
+          </h1>
+        </a>
+        <nav aria-label="Main navigation">
           <ul>
             <li>
-              <a href="#about">About me</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#education">Education</a>
-            </li>
-            <li>
-              <a href="#certifications">Certifications</a>
-            </li>
-            <li>
-              <a href="cv/mrganserCV_en.pdf" target="_blank">Download CV</a>
-            </li>
-          </ul>
-        </nav>
-        <footer>
-          <ul>
-            <li>
-              <a
-                id="stack-overflow-link"
-                title="StackOverflow"
-                target="_blank"
-                href="https://stackoverflow.com/users/4056222/mrganser"
-              >
-                <span class="fab fa-stack-overflow"></span>
+              <a id="stack-overflow-link" title="StackOverflow" target="_blank"
+                href="https://stackoverflow.com/users/4056222/mrganser">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-stackoverflow">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+                  <path d="M8 16h8" />
+                  <path d="M8.322 12.582l7.956 .836" />
+                  <path d="M8.787 9.168l7.826 1.664" />
+                  <path d="M10.096 5.764l7.608 2.472" />
+                </svg>
               </a>
             </li>
             <li>
-              <a
-                title="GitHub"
-                target="_blank"
-                href="https://github.com/mrganser"
-              >
-                <span class="fab fa-github"></span>
+              <a title="GitHub" target="_blank" href="https://github.com/mrganser">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                </svg>
               </a>
             </li>
             <li>
-              <a
-                title="Twitter"
-                target="_blank"
-                href="https://twitter.com/mrganser"
-              >
-                <span class="fab fa-twitter"></span>
+              <a title="Twitter" target="_blank" href="https://twitter.com/mrganser">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-twitter">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+                </svg>
               </a>
             </li>
             <li>
-              <a title="LinkedIn (soon)" target="_blank" disabled>
-                <span class="fab fa-linkedin"></span>
+              <a title="LinkedIn (soon)" target="_blank" href="https://linkedin.com/in/german-suarez-rodriguez">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M8 11v5" />
+                  <path d="M8 8v.01" />
+                  <path d="M12 16v-5" />
+                  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+                  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+                </svg>
               </a>
             </li>
             <li>
               <a title="Email" href="mailto:contact@mrganser.com">
-                <span class="fas fa-envelope"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                  <path d="M3 7l9 6l9 -6" />
+                </svg>
               </a>
             </li>
-          </ul>
-        </footer>
-      </section>
-      <div id="main">
-        <section id="about-section">
-          <i id="about" class="anchor"></i>
-          <h1 class="section-title">
-            <i class="fas fa-user-circle"></i> About me
-          </h1>
-          <div class="card">
-            <p>
-              <span class="highlight">Hello!</span> I am mrganser, a
-              <b>senior software engineer</b> currently working as a full stack
-              web developer. I have over seven years of experience building web
-              applications. I started as a J2EE programmer but nowadays I work
-              with the JavaScript ecosystem and I love it. I have also taken the
-              role of Scrum Master on my latest projects.<br /><br />
-              I am a perfectionist in anything I do. I stand out for my bug-free
-              code and for making sure all the scenarios are covered. I am a
-              very positive thinking man and I am not easily discouraged, I
-              always try to motivate my teammates. My co-workers usually say
-              that I also have a good eye for the front-end design. <br /><br />
-              If you want to know the person behind these words,
-              <a href="cv/mrganserCV_en.pdf" target="_blank">check out my CV</a
-              >.
-            </p>
-          </div>
-        </section>
-        <section id="skills-section">
-          <i id="skills" class="anchor"></i>
-          <h1 class="section-title"><i class="fas fa-desktop"></i> Skills</h1>
-          <div class="card-list">
-            <div class="card card-list-item">
-              <div class="card-list-item-body">
-                <h3 class="card-title">JavaScript / TypeScript</h3>
-                <p class="slider-text">NodeJS</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 90%;">90%</div>
-                </div>
-                <p class="slider-text">ReactJS/Redux</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 90%;">90%</div>
-                </div>
-                <p class="slider-text">GraphQL</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 80%;">80%</div>
-                </div>
-                <p class="slider-text">AngularJS/Angular</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 80%;">80%</div>
-                </div>
-              </div>
-            </div>
-            <div class="card card-list-item">
-              <div class="card-list-item-body">
-                <h3 class="card-title">Java</h3>
-                <p class="slider-text">JSP/JSF</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 80%;">80%</div>
-                </div>
-                <p class="slider-text">PrimeFaces</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 80%;">80%</div>
-                </div>
-                <p class="slider-text">Android</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 70%;">70%</div>
-                </div>
-              </div>
-            </div>
-            <div class="card card-list-item">
-              <div class="card-list-item-body">
-                <h3 class="card-title">Web</h3>
-                <p class="slider-text">HTML5</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 90%;">90%</div>
-                </div>
-                <p class="slider-text">CSS3</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 90%;">90%</div>
-                </div>
-                <p class="slider-text">WebRTC</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 80%;">80%</div>
-                </div>
-                <p class="slider-text">PHP/CMS (Joomla, Wordpress)</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 60%;">60%</div>
-                </div>
-              </div>
-            </div>
-            <div class="card card-list-item">
-              <div class="card-list-item-body">
-                <h3 class="card-title">Database</h3>
-                <p class="slider-text">SQL language</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 90%;">90%</div>
-                </div>
-                <p class="slider-text">PostgreSQL/BDR</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 90%;">90%</div>
-                </div>
-                <p class="slider-text">MySQL</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 70%;">70%</div>
-                </div>
-                <p class="slider-text">Oracle</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 60%;">60%</div>
-                </div>
-              </div>
-            </div>
-            <div class="card card-list-item">
-              <div class="card-list-item-body">
-                <h3 class="card-title">Languages</h3>
-                <p class="slider-text">Spanish</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 100%;">100%</div>
-                </div>
-                <p class="slider-text">English</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 80%;">80%</div>
-                </div>
-                <p class="slider-text">German</p>
-                <div class="slider-container">
-                  <div class="slider" style="--width: 20%;">20%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="portfolio-section">
-          <i id="portfolio" class="anchor"></i>
-          <h1 class="section-title">
-            <i class="fas fa-clipboard-list"></i> Portfolio
-          </h1>
-          <div class="card-list">
-            <div class="card card-list-item">
-              <figure class="card-list-item-figure">
-                <img src="img/portfolio/1.png" />
-                <figcaption>
-                  <a
-                    target="_blank"
-                    href="https://github.com/mrganser/chatterbox"
-                  >
-                    <span>
-                      <span class="fab fa-github"></span>
-                      Source code
-                    </span>
-                  </a>
-                </figcaption>
-              </figure>
-              <div class="card-list-item-body">
-                <h3 class="card-title">ChatterBox</h3>
-                <p>
-                  A web application to host video chat rooms up to 5 people
-                  using WebRTC technology.
-                </p>
-                <footer class="card-footer">
-                  <p class="technologies">
-                    <span title="NodeJS" class="fab fa-node-js fa-2x"></span>
-                    <span title="JavaScript" class="fab fa-js fa-2x"></span>
-                    <span title="HTML5" class="fab fa-html5 fa-2x"></span>
-                    <span title="CSS3" class="fab fa-css3 fa-2x"></span>
-                    <span title="WebRTC" class="fab fa-teamspeak fa-2x"></span>
-                  </p>
-                </footer>
-              </div>
-            </div>
-            <div class="card card-list-item">
-              <figure class="card-list-item-figure">
-                <img src="img/portfolio/2.jpg" />
-                <figcaption>
-                  <a target="_blank" href="https://github.com/mrganser">
-                    <span>
-                      <span class="fab fa-github"></span>
-                      Source code (soon)
-                    </span>
-                  </a>
-                </figcaption>
-              </figure>
-              <div class="card-list-item-body">
-                <h3 class="card-title">MagicBox</h3>
-                <p>
-                  A website that allows sharing media content between friends in
-                  real time, even using the YouTube API to play videos at the
-                  same time.
-                </p>
-                <footer class="card-footer">
-                  <p class="technologies">
-                    <span title="NodeJS" class="fab fa-node-js fa-2x"></span>
-                    <span title="JavaScript" class="fab fa-js fa-2x"></span>
-                    <span title="HTML5" class="fab fa-html5 fa-2x"></span>
-                    <span title="CSS3" class="fab fa-css3 fa-2x"></span>
-                  </p>
-                </footer>
-              </div>
-            </div>
-            <div class="card card-list-item">
-              <figure class="card-list-item-figure">
-                <img src="img/portfolio/3.jpg" />
-                <figcaption>
-                  <a target="_blank" href="https://github.com/mrganser">
-                    <span>
-                      <span class="fab fa-github"></span>
-                      Source code (soon)
-                    </span>
-                  </a>
-                </figcaption>
-              </figure>
-              <div class="card-list-item-body">
-                <h3 class="card-title">FileCloner</h3>
-                <p>
-                  Made on Electron, this desktop app lets you clone files in a
-                  certain way, choosing from some parameters.
-                </p>
-                <footer class="card-footer">
-                  <p class="technologies">
-                    <span title="NodeJS" class="fab fa-node-js fa-2x"></span>
-                    <span title="JavaScript" class="fab fa-js fa-2x"></span>
-                    <span title="HTML5" class="fab fa-html5 fa-2x"></span>
-                    <span title="CSS3" class="fab fa-css3 fa-2x"></span>
-                    <span title="ElectronJS" class="fas fa-atom fa-2x"></span>
-                    <span title="ReactJS" class="fab fa-react fa-2x"></span>
-                  </p>
-                </footer>
-              </div>
-            </div>
-            <div class="card card-list-item">
-              <figure class="card-list-item-figure">
-                <img src="img/portfolio/4.png" />
-                <figcaption>
-                  <a
-                    target="_blank"
-                    href="https://github.com/mrganser/cv-template"
-                  >
-                    <span>
-                      <span class="fab fa-github"></span>
-                      Source code
-                    </span>
-                  </a>
-                </figcaption>
-              </figure>
-              <div class="card-list-item-body">
-                <h3 class="card-title">CVTemplate</h3>
-                <p>
-                  This own website is open source too. Made just with HTML5,
-                  CSS3 Animations, FlexBox and CSS Grid. No JavaScript.
-                </p>
-                <footer class="card-footer">
-                  <p class="technologies">
-                    <span title="HTML5" class="fab fa-html5 fa-2x"></span>
-                    <span title="CSS3" class="fab fa-css3 fa-2x"></span>
-                  </p>
-                </footer>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="experience-section">
-          <i id="experience" class="anchor"></i>
-          <h1 class="section-title">
-            <i class="fas fa-briefcase"></i> Experience
-          </h1>
-          <ul class="timeline">
-            <li class="timeline-element">
-              <div class="timeline-content">
-                <h3 class="timeline-title">
-                  Senior software engineer
-                </h3>
-                <div class="timeline-body">
-                  <p class="timeline-subtitle">
-                    Asesoría Telemática Canarias S.L.
-                    <br /><i>February 2016 - Present</i>
-                  </p>
-                  <br />As a senior engineer, I continue working for the same
-                  company where I started, with more experience and
-                  responsibilities. Using the JavaScript stack, my team and I
-                  have designed, developed, deployed and maintained several
-                  production ready web applications related with emergency
-                  management software (APIs, performance, high availability,
-                  scalability...). I also advise teams on best practices and I
-                  am the Scrum Master on my new projects.
-                </div>
-              </div>
-            </li>
-            <li class="timeline-element">
-              <div class="timeline-content">
-                <h3 class="timeline-title">Junior software engineer</h3>
-                <div class="timeline-body">
-                  <p class="timeline-subtitle">
-                    Asesoría Telemática Canarias S.L.
-                    <br /><i>September 2011 - January 2016</i>
-                  </p>
-                  <br />I started working on this company where I also did the
-                  internship to finish my university degree. During this period
-                  I collaborated in developing different projects related with
-                  Call Center management software with the Java web stack.
-                </div>
-              </div>
+            <li>
+              <label class="darkmode-toggle" title="Toggle dark mode">
+                <input type="checkbox" id="darkmode-switch" />
+                <span class="icon-switch">
+                  <span class="icon-sun">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-sun">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                      <path
+                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                    </svg>
+                  </span>
+                  <span class="icon-moon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-moon">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                    </svg>
+                  </span>
+                </span>
+              </label>
             </li>
           </ul>
-        </section>
-        <section id="education-section">
-          <i id="education" class="anchor"></i>
-          <h1 class="section-title">
-            <i class="fas fa-graduation-cap"></i> Education
-          </h1>
-          <ul class="timeline">
-            <li class="timeline-element">
-              <div class="timeline-content">
-                <h3 class="timeline-title">
-                  Master's degree in Computer Science Engineering
-                </h3>
-                <div class="timeline-body">
-                  <p class="timeline-subtitle">
-                    Universidad de Las Palmas de Gran Canaria
-                    <br /><i>September 2014 - September 2017</i>
-                  </p>
-                  <br /><b>Specialization:</b> Web technologies and digital
-                  businesses. <br /><b>Thesis:</b> Developing a web application
-                  using WebRTC technologies. <br />Graduated with Honors.
-                </div>
-              </div>
-            </li>
-            <li class="timeline-element">
-              <div class="timeline-content">
-                <h3 class="timeline-title">
-                  Bachelor's degree in Computer Science Engineering
-                </h3>
-                <div class="timeline-body">
-                  <p class="timeline-subtitle">
-                    Universidad de Las Palmas de Gran Canaria
-                    <br /><i>September 2010 - December 2011</i>
-                  </p>
-                  <br /><b>Thesis:</b> Developing a program that checks the
-                  effectiveness, efficiency and uniqueness of student's
-                  programming exercises using the reflexive Java API.
-                </div>
-              </div>
-            </li>
-            <li class="timeline-element">
-              <div class="timeline-content">
-                <h3 class="timeline-title">
-                  University degree in Information Systems Engineering
-                </h3>
-                <div class="timeline-body">
-                  <p class="timeline-subtitle">
-                    Universidad de Las Palmas de Gran Canaria
-                    <br />University of Southern Denmark (Erasmus semester)
-                    <br /><i>September 2007 - June 2010</i>
-                  </p>
-                  <br />First in class. Graduated with Honors. <br />Regional
-                  2009 Scholarship for Academic Excellence.
-                </div>
-              </div>
-            </li>
-            <li class="timeline-element">
-              <div class="timeline-content">
-                <h3 class="timeline-title">Secondary school</h3>
-                <div class="timeline-body">
-                  <p class="timeline-subtitle">
-                    I.E.S Politécnico Las Palmas
-                    <br /><i>September 2005 - June 2007</i>
-                  </p>
-                  <br />Graduated with Honors.
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section id="certifications-section">
-          <i id="certifications" class="anchor"></i>
-          <h1 class="section-title">
-            <i class="fas fa-certificate"></i> Certifications
-          </h1>
-          <div class="notebook">
-            <div class="notebook-year">
-              <h3>2018</h3>
-            </div>
-            <div class="notebook-cert">
-              <p>Scrum Master certificate PSM I</p>
-            </div>
-            <div class="notebook-year">
-              <h3>2017</h3>
-            </div>
-            <div class="notebook-cert">
-              <p>Functional Programming in Erlang (30h)</p>
-            </div>
-            <div class="notebook-year">
-              <h3>2016</h3>
-            </div>
-            <div class="notebook-cert">
-              <p>Management systems and GDPR</p>
-            </div>
-            <div class="notebook-year">
-              <h3>2016</h3>
-            </div>
-            <div class="notebook-cert">
-              <p>ITIL Foundation Certificate in IT Service Management</p>
-            </div>
-            <div class="notebook-year">
-              <h3>2015</h3>
-            </div>
-            <div class="notebook-cert">
-              <p>Javascript, AngularJS, NodeJS</p>
-            </div>
-            <div class="notebook-year">
-              <h3>2014</h3>
-            </div>
-            <div class="notebook-cert">
-              <p>Certified ISO/IEC 27001 Auditor</p>
-            </div>
-            <div class="notebook-year">
-              <h3>2013</h3>
-            </div>
-            <div class="notebook-cert">
-              <p>Liferay (18h)</p>
-            </div>
-            <div class="notebook-year">
-              <h3>2011</h3>
-            </div>
-            <div class="notebook-cert">
-              <p>HTML5 & CSS3 (40h)</p>
-            </div>
-            <div class="notebook-year">
-              <h3>2010</h3>
-            </div>
-            <div class="notebook-cert">
-              <p>CISCO CCNA Exploration Routing Protocols and Concepts</p>
-            </div>
-            <div class="notebook-year">
-              <h3>2010</h3>
-            </div>
-            <div class="notebook-cert">
-              <p>CISCO CCNA Exploration Network Fundamentals</p>
-            </div>
-          </div>
-        </section>
+        </nav>
       </div>
+    </header>
+    <div id="main">
+      <section id="about-section">
+        <i id="about" class="anchor"></i>
+        <h2 class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle" aria-hidden="true">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+            <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+          </svg> About me
+        </h2>
+        <div class="card">
+          <p>
+            <span class="highlight">Hello!</span> I am <b>Germán</b>, a
+            <b>principal software engineer</b> with over fourteen years of experience building web
+            applications. I started as a J2EE programmer but nowadays I work
+            with the JavaScript / TypeScript ecosystem and I love it. I have also taken functions
+            of Engineering Manager coordinating product, design and tech functions.<br /><br />
+            I am a perfectionist in anything I do. I stand out for my bug-free
+            code and for making sure all the scenarios are covered while keeping simplicity
+            and avoiding unnecessary complexities. I am a
+            very positive thinking person and I am not easily discouraged, I
+            always try to motivate my teammates. <br /><br />
+            If you want a downloaded version, you can
+            <a href="cv/mrganserCV_en.pdf" target="_blank">check out my CV</a>.
+          </p>
+        </div>
+      </section>
+      <section id="portfolio-section">
+        <i id="portfolio" class="anchor"></i>
+        <h2 class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-list">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+            <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+            <path d="M9 12l.01 0" />
+            <path d="M13 12l2 0" />
+            <path d="M9 16l.01 0" />
+            <path d="M13 16l2 0" />
+          </svg> Portfolio
+        </h2>
+        <div class="card-list">
+          <div class="card card-list-item">
+            <figure class="card-list-item-figure">
+              <img src="img/portfolio/1.png" />
+              <figcaption>
+                <a target="_blank" title="Source code" href="https://github.com/mrganser/chatterbox">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg>
+                  </span>
+                </a>
+              </figcaption>
+            </figure>
+            <div class="card-list-item-body">
+              <h3 class="card-title">ChatterBox</h3>
+              <p>
+                A web application to host video chat rooms up to 5 people
+                using WebRTC technology.
+              </p>
+              <footer class="card-footer">
+                <p class="technologies">
+                  <span title="NodeJS">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-nodejs">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M9 9v8.044a2 2 0 0 1 -2.996 1.734l-1.568 -.9a3 3 0 0 1 -1.436 -2.561v-6.635a3 3 0 0 1 1.436 -2.56l6 -3.667a3 3 0 0 1 3.128 0l6 3.667a3 3 0 0 1 1.436 2.561v6.634a3 3 0 0 1 -1.436 2.56l-6 3.667a3 3 0 0 1 -3.128 0" />
+                      <path d="M17 9h-3.5a1.5 1.5 0 0 0 0 3h2a1.5 1.5 0 0 1 0 3h-3.5" />
+                    </svg>
+                  </span>
+                  <span title="JavaScript">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-javascript">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                      <path d="M7.5 8h3v8l-2 -1" />
+                      <path
+                        d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                    </svg>
+                  </span>
+                  <span title="HTML5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-html5">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                      <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                    </svg>
+                  </span>
+                  <span title="CSS3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-css3">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                      <path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                    </svg>
+                  </span>
+                  <span title="WebRTC">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-device-computer-camera">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                      <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                      <path d="M8 16l-2.091 3.486a1 1 0 0 0 .857 1.514h10.468a1 1 0 0 0 .857 -1.514l-2.091 -3.486" />
+                    </svg>
+                  </span>
+                </p>
+              </footer>
+            </div>
+          </div>
+          <div class="card card-list-item">
+            <figure class="card-list-item-figure">
+              <img src="img/portfolio/2.jpg" />
+              <figcaption>
+                <a target="_blank" title="Source code (soon)" href="https://github.com/mrganser">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg>
+                  </span>
+                </a>
+              </figcaption>
+            </figure>
+            <div class="card-list-item-body">
+              <h3 class="card-title">MagicBox</h3>
+              <p>
+                A website that allows sharing media content between friends in
+                real time, even using the YouTube API to play videos at the
+                same time.
+              </p>
+              <footer class="card-footer">
+                <p class="technologies">
+                  <span title="NodeJS">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-nodejs">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M9 9v8.044a2 2 0 0 1 -2.996 1.734l-1.568 -.9a3 3 0 0 1 -1.436 -2.561v-6.635a3 3 0 0 1 1.436 -2.56l6 -3.667a3 3 0 0 1 3.128 0l6 3.667a3 3 0 0 1 1.436 2.561v6.634a3 3 0 0 1 -1.436 2.56l-6 3.667a3 3 0 0 1 -3.128 0" />
+                      <path d="M17 9h-3.5a1.5 1.5 0 0 0 0 3h2a1.5 1.5 0 0 1 0 3h-3.5" />
+                    </svg>
+                  </span>
+                  <span title="JavaScript">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-javascript">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                      <path d="M7.5 8h3v8l-2 -1" />
+                      <path
+                        d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                    </svg>
+                  </span>
+                  <span title="HTML5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-html5">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                      <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                    </svg>
+                  </span>
+                  <span title="CSS3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-css3">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                      <path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                    </svg>
+                  </span>
+                </p>
+              </footer>
+            </div>
+          </div>
+          <div class="card card-list-item">
+            <figure class="card-list-item-figure">
+              <img src="img/portfolio/3.jpg" />
+              <figcaption>
+                <a target="_blank" title="Source code (soon)" href="https://github.com/mrganser">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg>
+                  </span>
+                </a>
+              </figcaption>
+            </figure>
+            <div class="card-list-item-body">
+              <h3 class="card-title">FileCloner</h3>
+              <p>
+                Made on Electron, this desktop app lets you clone files in a
+                certain way, choosing from some parameters.
+              </p>
+              <footer class="card-footer">
+                <p class="technologies">
+                  <span title="NodeJS">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-nodejs">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M9 9v8.044a2 2 0 0 1 -2.996 1.734l-1.568 -.9a3 3 0 0 1 -1.436 -2.561v-6.635a3 3 0 0 1 1.436 -2.56l6 -3.667a3 3 0 0 1 3.128 0l6 3.667a3 3 0 0 1 1.436 2.561v6.634a3 3 0 0 1 -1.436 2.56l-6 3.667a3 3 0 0 1 -3.128 0" />
+                      <path d="M17 9h-3.5a1.5 1.5 0 0 0 0 3h2a1.5 1.5 0 0 1 0 3h-3.5" />
+                    </svg>
+                  </span>
+                  <span title="JavaScript">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-javascript">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                      <path d="M7.5 8h3v8l-2 -1" />
+                      <path
+                        d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5" />
+                    </svg>
+                  </span>
+                  <span title="HTML5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-html5">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                      <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                    </svg>
+                  </span>
+                  <span title="CSS3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-css3">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                      <path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                    </svg>
+                  </span>
+                  <span title="ElectronJS">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-atom">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 12v.01" />
+                      <path
+                        d="M19.071 4.929c-1.562 -1.562 -6 .337 -9.9 4.243c-3.905 3.905 -5.804 8.337 -4.242 9.9c1.562 1.561 6 -.338 9.9 -4.244c3.905 -3.905 5.804 -8.337 4.242 -9.9" />
+                      <path
+                        d="M4.929 4.929c-1.562 1.562 .337 6 4.243 9.9c3.905 3.905 8.337 5.804 9.9 4.242c1.561 -1.562 -.338 -6 -4.244 -9.9c-3.905 -3.905 -8.337 -5.804 -9.9 -4.242" />
+                    </svg>
+                  </span>
+                  <span title="ReactJS">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-react">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102" />
+                      <path
+                        d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102" />
+                      <path
+                        d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2" />
+                      <path
+                        d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2" />
+                      <path
+                        d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896" />
+                      <path
+                        d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897" />
+                      <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z" />
+                    </svg>
+                  </span>
+                </p>
+              </footer>
+            </div>
+          </div>
+          <div class="card card-list-item">
+            <figure class="card-list-item-figure">
+              <img src="img/portfolio/4.png" />
+              <figcaption>
+                <a target="_blank" title="Source code" href="https://github.com/mrganser/cv-template">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg>
+                  </span>
+                </a>
+              </figcaption>
+            </figure>
+            <div class="card-list-item-body">
+              <h3 class="card-title">CVTemplate</h3>
+              <p>
+                This own website is open source too. Made just with HTML5,
+                CSS3 Animations, FlexBox and CSS Grid. No JavaScript.
+              </p>
+              <footer class="card-footer">
+                <p class="technologies">
+                  <span title="HTML5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-html5">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                      <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                    </svg>
+                  </span>
+                  <span title="CSS3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-css3">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                      <path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+                    </svg>
+                  </span>
+                </p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="experience-section">
+        <i id="experience" class="anchor"></i>
+        <h2 class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+            <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+            <path d="M12 12l0 .01" />
+            <path d="M3 13a20 20 0 0 0 18 0" />
+          </svg> Experience
+        </h2>
+        <ul class="timeline">
+          <li class="timeline-element">
+            <div class="timeline-content">
+              <h3 class="timeline-title">
+                Senior software engineer → Principal software engineer
+              </h3>
+              <div class="timeline-body">
+                <p class="timeline-subtitle">
+                  Insendi (Edtech Startup → Scaleup)
+                  <br /><i>Mar 2023 - Present</i>
+                </p>
+                <br />
+                <ul>
+                  <li>
+                    Contributed to the professionalization, growth, and transformation of a startup toward maturity by
+                    adapting methodologies such as Scrum and evolving its main product through roadmap decisions,
+                    including the implementation of new AI-driven features.
+                  </li>
+                  <li>
+                    Led the creation of a new product from scratch, making product decisions from a technical
+                    perspective
+                    and defining its roadmap, in communication with direction, product and design.
+                  </li>
+                  <li>
+                    Introduced pioneering development practices such as feature flags, trunk-based development, and
+                    monorepo
+                    architecture, as well as leading major refactoring and migration initiatives.
+                  </li>
+                  <li>
+                    Managed system complexity through a broad technical vision, reducing technical debt and implementing
+                    refactoring methodologies.
+                  </li>
+                  <li>
+                    Improved CI/CD processes, cutting deployment times by more than 50%, reducing errors, and achieving
+                    0%
+                    system downtime in recent years.
+                  </li>
+                  <li>
+                    Acted as an engineering manager, mentoring several junior engineers who advanced to senior and team
+                    lead
+                    positions, recognized for my positive attitude, patience and empathy.
+                  </li>
+                  <li>
+                    Created an employee handbook achieving a satisfaction score of 4.9/5 and raising team morale.
+                  </li>
+                  <li>
+                    Recognized as the company's top-rated leader in 360° feedback surveys, scoring above 4.8/5.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-element">
+            <div class="timeline-content">
+              <h3 class="timeline-title">
+                Junior software engineer → Senior software engineer
+              </h3>
+              <div class="timeline-body">
+                <p class="timeline-subtitle">
+                  Contactel (Emergency management regional company)
+                  <br /><i>February 2016 - Present</i>
+                </p>
+                <br />
+                <ul>
+                  <li>
+                    Started as an intern to finish my university degree and progressed to a senior position.
+                  </li>
+                  <li>
+                    Gradually took on responsibilities, becoming capable of requirements gathering, analysis, and
+                    team-based
+                    project development without supervision.
+                  </li>
+                  <li>
+                    Eventually led a development team of two, implementing agile methodologies and consistently
+                    delivering
+                    projects on time and with high quality.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="education-section">
+        <i id="education" class="anchor"></i>
+        <h2 class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-backpack">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M5 18v-6a6 6 0 0 1 6 -6h2a6 6 0 0 1 6 6v6a3 3 0 0 1 -3 3h-8a3 3 0 0 1 -3 -3z" />
+            <path d="M10 6v-1a2 2 0 1 1 4 0v1" />
+            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+            <path d="M11 10h2" />
+          </svg> Education
+        </h2>
+        <ul class="timeline">
+          <li class="timeline-element">
+            <div class="timeline-content">
+              <h3 class="timeline-title">
+                Master's degree in Computer Science Engineering
+              </h3>
+              <div class="timeline-body">
+                <p class="timeline-subtitle">
+                  Universidad de Las Palmas de Gran Canaria
+                  <br /><i>September 2014 - September 2017</i>
+                </p>
+                <br /><b>Specialization:</b> Web technologies and digital
+                businesses. <br /><b>Thesis:</b> Developing a web application
+                using WebRTC technologies. <br />Graduated with Honors.
+              </div>
+            </div>
+          </li>
+          <li class="timeline-element">
+            <div class="timeline-content">
+              <h3 class="timeline-title">
+                Bachelor's degree in Computer Science Engineering
+              </h3>
+              <div class="timeline-body">
+                <p class="timeline-subtitle">
+                  Universidad de Las Palmas de Gran Canaria
+                  <br /><i>September 2010 - December 2011</i>
+                </p>
+                <br /><b>Thesis:</b> Developing a program that checks the
+                effectiveness, efficiency and uniqueness of student's
+                programming exercises using the reflexive Java API.
+              </div>
+            </div>
+          </li>
+          <li class="timeline-element">
+            <div class="timeline-content">
+              <h3 class="timeline-title">
+                University degree in Information Systems Engineering
+              </h3>
+              <div class="timeline-body">
+                <p class="timeline-subtitle">
+                  Universidad de Las Palmas de Gran Canaria
+                  <br />University of Southern Denmark (Erasmus semester)
+                  <br /><i>September 2007 - June 2010</i>
+                </p>
+                <br />First in class. Graduated with Honors. <br />Regional
+                2009 Scholarship for Academic Excellence.
+              </div>
+            </div>
+          </li>
+          <li class="timeline-element">
+            <div class="timeline-content">
+              <h3 class="timeline-title">Secondary school</h3>
+              <div class="timeline-body">
+                <p class="timeline-subtitle">
+                  I.E.S Politécnico Las Palmas
+                  <br /><i>September 2005 - June 2007</i>
+                </p>
+                <br />Graduated with Honors.
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="certifications-section">
+        <i id="certifications" class="anchor"></i>
+        <h2 class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-certificate">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" />
+            <path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73" />
+            <path d="M6 9l12 0" />
+            <path d="M6 12l3 0" />
+            <path d="M6 15l2 0" />
+          </svg> Certifications
+        </h2>
+        <div class="notebook">
+          <div class="notebook-year">
+            <h3>2018</h3>
+          </div>
+          <div class="notebook-cert">
+            <p>Scrum Master certificate PSM I</p>
+          </div>
+          <div class="notebook-year">
+            <h3>2017</h3>
+          </div>
+          <div class="notebook-cert">
+            <p>Functional Programming in Erlang (30h)</p>
+          </div>
+          <div class="notebook-year">
+            <h3>2016</h3>
+          </div>
+          <div class="notebook-cert">
+            <p>Management systems and GDPR</p>
+          </div>
+          <div class="notebook-year">
+            <h3>2016</h3>
+          </div>
+          <div class="notebook-cert">
+            <p>ITIL Foundation Certificate in IT Service Management</p>
+          </div>
+          <div class="notebook-year">
+            <h3>2015</h3>
+          </div>
+          <div class="notebook-cert">
+            <p>Javascript, AngularJS, NodeJS</p>
+          </div>
+          <div class="notebook-year">
+            <h3>2014</h3>
+          </div>
+          <div class="notebook-cert">
+            <p>Certified ISO/IEC 27001 Auditor</p>
+          </div>
+          <div class="notebook-year">
+            <h3>2013</h3>
+          </div>
+          <div class="notebook-cert">
+            <p>Liferay (18h)</p>
+          </div>
+          <div class="notebook-year">
+            <h3>2011</h3>
+          </div>
+          <div class="notebook-cert">
+            <p>HTML5 & CSS3 (40h)</p>
+          </div>
+          <div class="notebook-year">
+            <h3>2010</h3>
+          </div>
+          <div class="notebook-cert">
+            <p>CISCO CCNA Exploration Routing Protocols and Concepts</p>
+          </div>
+          <div class="notebook-year">
+            <h3>2010</h3>
+          </div>
+          <div class="notebook-cert">
+            <p>CISCO CCNA Exploration Network Fundamentals</p>
+          </div>
+        </div>
+      </section>
     </div>
-    <script>
-      //Show warning message on IE browser
-      if (
-        navigator.userAgent.indexOf("MSIE ") > -1 ||
-        navigator.userAgent.indexOf("Trident") > -1
-      ) {
-        document.getElementById("doNotUseIE").style.display = "block";
-      }
-    </script>
-  </body>
+  </div>
+</body>
+
 </html>

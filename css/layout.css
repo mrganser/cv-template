@@ -1,98 +1,109 @@
 /* Container div */
 
 #container {
-  height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-areas: "header main";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header" "main";
 }
 
 /* Header section */
 
+
 #header {
   grid-area: header;
+  background-color: var(--primary);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
-  flex-direction: column;
-  background-color: var(--main);
-  color: white;
-  text-shadow: 2px 2px 2px var(--third-black);
-  text-align: center;
-  animation: fadeInRight 1s both;
-  overflow: hidden;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 64px;
 }
 
-#header > header {
-  flex: 2 0 0;
-  padding: 20px 10px 10px 10px;
-}
-
-#header > header > #title {
-  margin: 10px;
-  animation: fadeInDown 1s 0.5s both;
-}
-
-#header > header > #subtitle {
-  margin: 10px;
-  animation: fadeInDown 1s 0.5s both;
-}
-
-#header > header > #subtitle > h4 {
-  font-weight: normal;
-}
-
-#header > header img {
-  margin-top: 10px;
+#header-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  max-width: 200px;
-  animation: appear 1s 0.5s both;
+  max-width: 57rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-#header > nav {
-  flex: 4 0 0;
-}
 
-#header > nav > ul > li {
-  border-top: 1px solid var(--third-white);
-  list-style-type: none;
-}
-
-#header > nav > ul > li:first-child {
-  border-top: none;
-}
-
-#header > nav > ul > li > a {
-  display: block;
-  padding: 10px;
-  color: white;
+/* Logo and brand link styling */
+#header-inner .logo-link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  transition: background-color 0.5s;
-}
-
-#header > nav > ul > li > a:hover,
-#header > nav > ul > li > a:focus {
-  background-color: var(--secondary);
-  outline: none;
-}
-
-#header > footer {
-  flex: 1 0 0;
-  margin: 4px auto;
-  font-size: 1.2em;
-}
-
-#header > footer > ul > li {
-  list-style-type: none;
-  float: left;
-  padding: 0 10px 0;
-}
-
-#header > footer > ul > li > a {
-  color: var(--half-white);
+  color: #fff;
+  text-align: left;
   transition: color 0.5s;
 }
 
-#header > footer > ul > li > a:hover,
-#header > footer > ul > li > a:focus {
+#header-inner .logo-link:hover,
+#header-inner .logo-link:focus {
+  color: var(--secondary);
+  outline: none;
+  transition: color 0.5s;
+}
+
+#header-inner .logo-link img {
+  margin-right: 1rem;
+  width: 40px;
+  max-width: 40px;
+  height: auto;
+  display: block;
+}
+
+#header-inner .logo-link h1 {
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+#header-inner .logo-link h1:before {
+  content: '<';
+  color: var(--secondary);
+}
+
+#header-inner .logo-link h1:after {
+  content: '>';
+  color: var(--secondary);
+}
+
+#header-inner nav {
+  margin-left: auto;
+  font-size: 1.2rem;
+  line-height: 0rem;
+  display: flex;
+  align-items: center;
+}
+
+#header-inner nav ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  margin-left: 0.5rem;
+}
+
+#header-inner nav ul li {
+  list-style-type: none;
+}
+
+#header-inner nav ul li a {
+  color: #fff;
+  transition: color 0.5s;
+  text-decoration: none;
+}
+
+#header-inner nav ul li a:hover,
+#header-inner nav ul li a:focus {
   color: var(--secondary);
   outline: none;
 }
@@ -102,127 +113,33 @@
 #main {
   grid-area: main;
   background-color: var(--background);
-  overflow-y: scroll;
   scroll-behavior: smooth;
-  padding: 20px 80px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#main > section {
+#main>section {
+  animation: fadeInUp 0.5s;
   position: relative;
-  margin: 28px 10px 80px;
+  margin: 3rem 0;
+  max-width: 56.5rem;
+  width: 100%;
+  padding: 0 2rem;
 }
 
-#main > section > .anchor {
-  position: absolute;
-  top: -20px;
-}
-
-#main > #about-section a {
-  text-decoration: none;
-  font-weight: bold;
+#main>section>.section-title {
   color: var(--secondary);
-}
-#main > #about-section a:visited {
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--secondary);
-}
-
-#main > section > .section-title {
-  color: var(--main);
-  border-bottom: 3px solid var(--main);
-  padding-bottom: 10px;
+  border-bottom: 3px solid var(--secondary);
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.5rem;
 }
 
-/* Media queries */
-
-@media (max-width: 1024px) {
-  #container {
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "header" "main";
-  }
-  #header {
-    position: sticky;
-    /* A bit hacky to get nav sticky */
-    top: -283px;
-    z-index: 1;
-    flex-direction: column;
-    align-items: center;
-    animation: fadeInDown 1s;
-  }
-  #header > header {
-    order: 1;
-  }
-  #header > nav {
-    margin-top: 4px;
-    order: 3;
-  }
-  #header > nav > ul > li {
-    float: left;
-    border-top: none;
-  }
-  #header > footer {
-    order: 2;
-  }
-  #main {
-    overflow-y: hidden;
-    padding: 40px;
-  }
-  #main > section > .anchor {
-    /* Anchor above to avoid collision with menu */
-    top: -60px;
-  }
-}
-
-@media (max-width: 768px) {
-  #header {
-    align-items: initial;
-    animation: fadeInDown 1s;
-    overflow: visible;
-  }
-  #header > nav > ul > li {
-    float: none;
-    border-top: 1px solid var(--third-white);
-  }
-  #header > nav > ul > li:first-child {
-    border-top: 1px solid var(--third-white);
-  }
-  #header > nav > #nav-burger {
-    display: block;
-    padding: 8px;
-    transition: background-color 0.5s;
-    cursor: pointer;
-  }
-  #header > nav > #nav-burger:hover,
-  #header > nav > #nav-burger:focus {
-    background-color: var(--half-black);
-  }
-  #header > nav > #nav-burger > i {
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: white;
-    border-radius: 2px;
-    margin: 4px auto 4px;
-  }
-  #header > nav > ul {
-    transition: max-height 0.5s 0.2s;
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: 1;
-    background-color: var(--main);
-    width: 100%;
-  }
-  #header > nav > #nav-burger:focus ~ ul {
-    max-height: 340px;
-  }
-  #header > footer > ul > li {
-    padding: 0 6px 0;
-  }
-  #main {
-    padding: 10px;
-  }
+#main>section>.section-title>.icon {
+  padding-bottom: 0.25rem;
 }

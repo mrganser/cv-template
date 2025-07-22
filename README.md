@@ -46,7 +46,7 @@ This project is ready to deploy anywhere as there are only .html, .css and image
 * FlexBox - Mainly when showing list of cards and inside the header.
 * CSSGrid - Main layout: positioning header and main sections.
 * CSS3 Animations - Appear, fade in...
-
+* Icons from Tabler Icons
 
 ## Versioning
 
