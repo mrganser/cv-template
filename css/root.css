@@ -1,16 +1,8 @@
 :root {
   --primary: #223545;
-  --secondary: #007e7e;
-  --background: #fafafa;
   --half-black: rgba(0, 0, 0, 0.5);
   --light-black: rgba(0, 0, 0, 0.2);
-  --contrast: #fff;
-  --shadows: rgba(0, 0, 0, 0.2);
-  --text-color: #000;
-}
-
-/* Light mode */
-:root:has(#darkmode-switch:not:checked) {
+  /* Light theme (default) */
   --secondary: #007e7e;
   --background: #fafafa;
   --contrast: #fff;
@@ -18,13 +10,37 @@
   --text-color: #000;
 }
 
-/* Dark mode */
-:root:has(#darkmode-switch:checked) {
-  --secondary: #f8ce0d;
-  --background: #181a1b;
-  --contrast: #181a1b;
-  --shadows: #fff;
-  --text-color: #fff;
+/* OS prefers dark → apply dark theme by default */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --secondary: #f8ce0d;
+    --background: #181a1b;
+    --contrast: #181a1b;
+    --shadows: #fff;
+    --text-color: #fff;
+  }
+}
+
+/* Toggle checked + OS prefers light → override to dark */
+@media (prefers-color-scheme: light) {
+  :root:has(#darkmode-switch:checked) {
+    --secondary: #f8ce0d;
+    --background: #181a1b;
+    --contrast: #181a1b;
+    --shadows: #fff;
+    --text-color: #fff;
+  }
+}
+
+/* Toggle checked + OS prefers dark → override to light */
+@media (prefers-color-scheme: dark) {
+  :root:has(#darkmode-switch:checked) {
+    --secondary: #007e7e;
+    --background: #fafafa;
+    --contrast: #fff;
+    --shadows: rgba(0, 0, 0, 0.2);
+    --text-color: #000;
+  }
 }
 
 * {
@@ -119,28 +135,53 @@ body {
   transition: color 0.5s, opacity 0.3s, transform 0.3s;
 }
 
+/* Default: sun highlighted (light theme) */
 .icon-switch .icon-sun {
   opacity: 1;
   z-index: 2;
+  transform: scale(1);
 }
 
 .icon-switch .icon-moon {
   opacity: 0.2;
   z-index: 1;
+  transform: scale(1);
 }
 
-.darkmode-toggle input:checked~.icon-switch .icon-sun {
-  opacity: 0.5;
-  transform: scale(0.9);
+/* OS prefers dark (unchecked) → dark theme showing → highlight moon */
+@media (prefers-color-scheme: dark) {
+  .icon-switch .icon-sun {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  .icon-switch .icon-moon {
+    opacity: 1;
+    transform: scale(1.1);
+  }
 }
 
-.darkmode-toggle input:checked~.icon-switch .icon-moon {
-  opacity: 1;
-  transform: scale(1.1);
+/* OS prefers light + checked → dark theme showing → highlight moon */
+@media (prefers-color-scheme: light) {
+  .darkmode-toggle input:checked~.icon-switch .icon-sun {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  .darkmode-toggle input:checked~.icon-switch .icon-moon {
+    opacity: 1;
+    transform: scale(1.1);
+  }
 }
 
-.darkmode-toggle input:checked~.icon-switch {
-  color: #fff;
+/* OS prefers dark + checked → light theme showing → highlight sun */
+@media (prefers-color-scheme: dark) {
+  .darkmode-toggle input:checked~.icon-switch .icon-sun {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .darkmode-toggle input:checked~.icon-switch .icon-moon {
+    opacity: 0.2;
+    transform: scale(1);
+  }
 }
 
 /* Style links with secondary color */
