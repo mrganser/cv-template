@@ -1,191 +1,184 @@
+/* ===== Design tokens ===== */
 :root {
-  --primary: #223545;
-  --half-black: rgba(0, 0, 0, 0.5);
-  --light-black: rgba(0, 0, 0, 0.2);
-  /* Light theme (default) */
-  --secondary: #007e7e;
-  --background: #fafafa;
-  --contrast: #fff;
-  --shadows: rgba(0, 0, 0, 0.2);
-  --text-color: #000;
+  --primary: #1a1a2e;
+  --accent: #007e7e;
+  --accent-light: #00a89d;
+  --accent-glow: rgba(0, 126, 126, 0.25);
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-muted: #6b7280;
+  --header-text: rgba(255, 255, 255, 0.6);
+  --shadow: rgba(0, 0, 0, 0.08);
+  --shadow-lg: rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 1px 3px var(--shadow);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --max-width: 56rem;
+  --text-on-accent: #fff;
+  --header-height: 3.5rem;
 }
 
-/* OS prefers dark → apply dark theme by default */
+/* OS prefers dark → dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --secondary: #f8ce0d;
-    --background: #181a1b;
-    --contrast: #181a1b;
-    --shadows: #fff;
-    --text-color: #fff;
+    --primary: #0c0a09;
+    --accent: #f8ce0d;
+    --accent-light: #fde047;
+    --accent-glow: rgba(248, 206, 13, 0.2);
+    --bg: #0c0a09;
+    --surface: #1c1917;
+    --text: #fafaf9;
+    --text-muted: #a8a29e;
+    --text-on-accent: var(--primary);
+    --shadow: rgba(0, 0, 0, 0.3);
+    --shadow-lg: rgba(0, 0, 0, 0.5);
   }
 }
 
-/* Toggle checked + OS prefers light → override to dark */
+/* Light OS + toggle checked → dark */
 @media (prefers-color-scheme: light) {
   :root:has(#darkmode-switch:checked) {
-    --secondary: #f8ce0d;
-    --background: #181a1b;
-    --contrast: #181a1b;
-    --shadows: #fff;
-    --text-color: #fff;
+    --primary: #0c0a09;
+    --accent: #f8ce0d;
+    --accent-light: #fde047;
+    --accent-glow: rgba(248, 206, 13, 0.2);
+    --bg: #0c0a09;
+    --surface: #1c1917;
+    --text: #fafaf9;
+    --text-muted: #a8a29e;
+    --text-on-accent: var(--primary);
+    --shadow: rgba(0, 0, 0, 0.3);
+    --shadow-lg: rgba(0, 0, 0, 0.5);
   }
 }
 
-/* Toggle checked + OS prefers dark → override to light */
+/* Dark OS + toggle checked → light */
 @media (prefers-color-scheme: dark) {
   :root:has(#darkmode-switch:checked) {
-    --secondary: #007e7e;
-    --background: #fafafa;
-    --contrast: #fff;
-    --shadows: rgba(0, 0, 0, 0.2);
-    --text-color: #000;
+    --primary: #1a1a2e;
+    --accent: #007e7e;
+    --accent-light: #00a89d;
+    --accent-glow: rgba(0, 126, 126, 0.25);
+    --text-on-accent: #fff;
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #1c1917;
+    --text-muted: #6b7280;
+    --shadow: rgba(0, 0, 0, 0.08);
+    --shadow-lg: rgba(0, 0, 0, 0.12);
   }
 }
 
-* {
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  border: 0;
   box-sizing: border-box;
 }
 
+/* ===== Base ===== */
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
-@media (max-width: 768px) {
+/* Only apply scroll-padding when navigating to a fragment */
+html:has(:target) {
+  scroll-padding-top: calc(var(--header-height) + 2rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
   html {
-    font-size: 12px;
+    scroll-behavior: auto;
   }
 }
 
 body {
-  font-family: Helvetica, sans-serif;
-  line-height: 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
   text-rendering: optimizeLegibility;
-  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
 }
 
-.icon {
-  height: 1.5rem;
-  width: 1.5rem;
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-.hidden {
-  display: none;
+a:hover {
+  color: var(--accent-light);
 }
 
-.highlight {
-  font-size: 2.5em;
-  font-weight: bold;
-  color: var(--secondary);
-}
-
-#stack-overflow-link:hover:after {
+img {
   display: block;
-  position: absolute;
-  content: url(https://stackoverflow.com/users/flair/4056222.png);
-  animation: appear 0.5s 0s;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Dark mode icon switch styles */
-.darkmode-toggle {
-  display: flex;
+ul {
+  list-style: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== Typography scale ===== */
+h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 1; letter-spacing: -0.03em; font-weight: 800; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.02em; }
+h3 { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 600; }
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
   align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
   cursor: pointer;
-  position: relative;
-  height: 28px;
-  justify-content: center;
 }
 
-.darkmode-toggle input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-  position: absolute;
+.btn-primary {
+  background: var(--accent);
+  color: var(--text-on-accent);
 }
 
-.icon-switch {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--light-black);
-  border-radius: 16px;
-  height: 24px;
-  position: relative;
-  box-sizing: border-box;
-  padding: 2px 4px;
-  gap: 0.2rem;
+.btn-primary:hover {
+  background: var(--accent-light);
+  color: var(--text-on-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px var(--accent-glow);
 }
 
-.icon-switch:hover .icon-sun,
-.icon-switch:focus .icon-sun,
-.icon-switch:hover .icon-moon,
-.icon-switch:focus .icon-moon {
-  color: var(--secondary);
+.btn-ghost {
+  color: rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
 }
 
-.icon-switch .icon-sun,
-.icon-switch .icon-moon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.btn-ghost:hover {
   color: #fff;
-  transition: color 0.5s, opacity 0.3s, transform 0.3s;
-}
-
-/* Default: sun highlighted (light theme) */
-.icon-switch .icon-sun {
-  opacity: 1;
-  z-index: 2;
-  transform: scale(1);
-}
-
-.icon-switch .icon-moon {
-  opacity: 0.2;
-  z-index: 1;
-  transform: scale(1);
-}
-
-/* OS prefers dark (unchecked) → dark theme showing → highlight moon */
-@media (prefers-color-scheme: dark) {
-  .icon-switch .icon-sun {
-    opacity: 0.5;
-    transform: scale(0.9);
-  }
-  .icon-switch .icon-moon {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-}
-
-/* OS prefers light + checked → dark theme showing → highlight moon */
-@media (prefers-color-scheme: light) {
-  .darkmode-toggle input:checked~.icon-switch .icon-sun {
-    opacity: 0.5;
-    transform: scale(0.9);
-  }
-  .darkmode-toggle input:checked~.icon-switch .icon-moon {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-}
-
-/* OS prefers dark + checked → light theme showing → highlight sun */
-@media (prefers-color-scheme: dark) {
-  .darkmode-toggle input:checked~.icon-switch .icon-sun {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .darkmode-toggle input:checked~.icon-switch .icon-moon {
-    opacity: 0.2;
-    transform: scale(1);
-  }
-}
-
-/* Style links with secondary color */
-a,
-a:visited {
-  color: var(--secondary);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
 }
