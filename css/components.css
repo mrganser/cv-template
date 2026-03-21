@@ -346,6 +346,19 @@
   background: color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
+.project-body h3 a {
+  color: inherit;
+}
+
+.project-page-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
 /* ===== Certifications ===== */
 .cert-grid {
   display: grid;
