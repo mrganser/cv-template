@@ -40,14 +40,12 @@
   height: 3px;
   margin: 0 auto 2rem;
   border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--accent) 30%,
-    var(--accent-light) 50%,
-    var(--accent) 70%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      transparent 0%,
+      var(--accent) 30%,
+      var(--accent-light) 50%,
+      var(--accent) 70%,
+      transparent 100%);
   background-size: 200% 100%;
   animation: shimmer 4s ease-in-out infinite;
 }
@@ -91,13 +89,19 @@
 }
 
 .metric-value {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3.2vw, 2.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--text-on-accent);
-  line-height: 1;
+  line-height: 1.1;
   text-wrap: balance;
-  max-width: 10ch;
+  max-width: 12ch;
+  min-height: 2.2em;
+  align-content: center;
+}
+
+.metric-value .no-break {
+  white-space: nowrap;
 }
 
 .metric-value small {
