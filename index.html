@@ -23,8 +23,8 @@
         <a href="#education">education</a>
         <a href="#certifications">certs</a>
       </nav>
-      <input type="checkbox" id="theme-switch" class="sr-only" aria-label="Toggle light/dark theme">
-      <label for="theme-switch" class="theme-toggle" title="Toggle theme"></label>
+      <input type="checkbox" id="theme-switch" class="sr-only">
+      <label for="theme-switch" class="theme-toggle" title="Toggle theme"><span class="sr-only">Switch to </span></label>
     </div>
   </header>
 
@@ -47,14 +47,14 @@
         </dl>
         <div class="actions">
           <a class="btn" href="cv/German_Suarez_CV_EN.pdf" target="_blank">./download-cv.pdf</a>
-          <a class="btn ghost" href="https://github.com/mrganser" target="_blank" rel="noopener">github</a>
+          <a class="btn ghost" href="https://github.com/mrganser" target="_blank" rel="noopener" aria-label="github profile">github</a>
           <a class="btn ghost" href="https://linkedin.com/in/german-suarez-rodriguez" target="_blank"
-            rel="noopener">linkedin</a>
+            rel="noopener" aria-label="linkedin profile">linkedin</a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="about">
+    <section id="about" class="about" aria-label="About">
       <div class="wrap">
         <h2>cat <span>about.md</span></h2>
         <p>
@@ -76,7 +76,7 @@
       </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" aria-label="Experience">
       <div class="wrap">
         <h2>git log <span>--career</span></h2>
 
@@ -149,7 +149,7 @@
       </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" aria-label="Projects">
       <div class="wrap">
         <h2>ls <span>-l projects/</span></h2>
         <p class="group">work/</p>
@@ -176,15 +176,17 @@
         <p class="group">side/</p>
         <ul class="projects">
           <li class="project">
-            <h3>
-              MeepleBee
+            <div class="project-head">
+              <h3>MeepleBee</h3>
               <span class="links">
-                <a href="https://meeplebee.com" target="_blank" rel="noopener">website</a>
+                <a href="https://meeplebee.com" target="_blank" rel="noopener"
+                  aria-label="website of MeepleBee">website</a>
                 <a href="https://play.google.com/store/apps/details?id=com.mrganser.meeplebee" target="_blank"
-                  rel="noopener">google play</a>
-                <a href="https://apps.apple.com/app/id6759684074" target="_blank" rel="noopener">app store</a>
+                  rel="noopener" aria-label="google play listing of MeepleBee">google play</a>
+                <a href="https://apps.apple.com/app/id6759684074" target="_blank" rel="noopener"
+                  aria-label="app store listing of MeepleBee">app store</a>
               </span>
-            </h3>
+            </div>
             <p>
               A board game companion app with +12 tools for tabletop gaming: dice rollers, score trackers, timers,
               and more. Available on Android and iOS.
@@ -192,22 +194,20 @@
             <div class="tags"><span>react-native</span><span>typescript</span><span>expo</span></div>
           </li>
           <li class="project">
-            <h3>
-              ChatterBox
-              <span class="links"><a href="https://github.com/mrganser/chatterbox" target="_blank"
-                  rel="noopener">source</a></span>
-            </h3>
+            <div class="project-head">
+              <h3>ChatterBox</h3>
+              <span class="links"><a href="https://github.com/mrganser/chatterbox" target="_blank" rel="noopener" aria-label="source of ChatterBox">source</a></span>
+            </div>
             <p>A web application to host video chat rooms up to 5 people using WebRTC technology.</p>
             <div class="tags">
               <span>next.js</span><span>typescript</span><span>react</span><span>tailwind</span><span>webrtc</span>
             </div>
           </li>
           <li class="project">
-            <h3>
-              MagicBox
-              <span class="links"><a href="https://github.com/mrganser/magicbox" target="_blank"
-                  rel="noopener">source</a></span>
-            </h3>
+            <div class="project-head">
+              <h3>MagicBox</h3>
+              <span class="links"><a href="https://github.com/mrganser/magicbox" target="_blank" rel="noopener" aria-label="source of MagicBox">source</a></span>
+            </div>
             <p>
               A website that allows sharing media content between friends in real time, even using the YouTube API
               to play videos at the same time.
@@ -217,21 +217,19 @@
             </div>
           </li>
           <li class="project">
-            <h3>
-              FileCloner
-              <span class="links"><a href="https://github.com/mrganser/filecloner" target="_blank"
-                  rel="noopener">source</a></span>
-            </h3>
+            <div class="project-head">
+              <h3>FileCloner</h3>
+              <span class="links"><a href="https://github.com/mrganser/filecloner" target="_blank" rel="noopener" aria-label="source of FileCloner">source</a></span>
+            </div>
             <p>Made on Electron, this desktop app lets you clone files in a certain way, choosing from some
               parameters.</p>
             <div class="tags"><span>typescript</span><span>react</span><span>tailwind</span><span>electron</span></div>
           </li>
           <li class="project">
-            <h3>
-              CVTemplate
-              <span class="links"><a href="https://github.com/mrganser/cv-template" target="_blank"
-                  rel="noopener">source</a></span>
-            </h3>
+            <div class="project-head">
+              <h3>CVTemplate</h3>
+              <span class="links"><a href="https://github.com/mrganser/cv-template" target="_blank" rel="noopener" aria-label="source of CVTemplate">source</a></span>
+            </div>
             <p>This very website is open source too. Plain HTML and CSS, no JavaScript.</p>
             <div class="tags"><span>html5</span><span>css3</span></div>
           </li>
@@ -239,7 +237,7 @@
       </div>
     </section>
 
-    <section id="education">
+    <section id="education" aria-label="Education">
       <div class="wrap">
         <h2>cat <span>education.log</span></h2>
 
@@ -284,7 +282,7 @@
       </div>
     </section>
 
-    <section id="certifications">
+    <section id="certifications" aria-label="Certifications">
       <div class="wrap">
         <h2>ls <span>certs/</span></h2>
         <ul class="certs">
@@ -309,10 +307,10 @@
     <div class="wrap">
       <p>Built with HTML &amp; CSS. Zero JavaScript.</p>
       <div class="links">
-        <a href="https://github.com/mrganser" target="_blank" rel="noopener">github</a>
-        <a href="https://stackoverflow.com/users/4056222/mrganser" target="_blank" rel="noopener">stackoverflow</a>
-        <a href="https://twitter.com/mrganser" target="_blank" rel="noopener">twitter</a>
-        <a href="https://linkedin.com/in/german-suarez-rodriguez" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://github.com/mrganser" target="_blank" rel="noopener" aria-label="github profile">github</a>
+        <a href="https://stackoverflow.com/users/4056222/mrganser" target="_blank" rel="noopener" aria-label="stackoverflow profile">stackoverflow</a>
+        <a href="https://twitter.com/mrganser" target="_blank" rel="noopener" aria-label="twitter profile">twitter</a>
+        <a href="https://linkedin.com/in/german-suarez-rodriguez" target="_blank" rel="noopener" aria-label="linkedin profile">linkedin</a>
       </div>
     </div>
   </footer>
