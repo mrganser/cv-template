@@ -5,537 +5,315 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-    content="Germán Suárez — Principal Software Engineer with 15+ years building web applications. Portfolio, experience, and more.">
+    content="Germán Suárez, Principal Software Engineer with 15+ years building web applications. Portfolio, experience, and more.">
   <meta name="author" content="mrganser">
   <title>Germán Suárez · Principal Software Engineer</title>
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="css/root.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <input type="checkbox" id="darkmode-switch" class="sr-only" aria-label="Toggle dark mode">
-
-  <header class="header">
-    <div class="header-inner">
-      <a href="/" class="logo" aria-label="Home">
-        <img alt="" src="img/logo.png" width="32" height="32">
-        <span>&lt;mrganser&gt;</span>
-      </a>
-      <nav class="nav-sections" aria-label="Page sections">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#education">Education</a>
+  <header class="bar">
+    <div class="wrap">
+      <a href="/" class="brand">~/mrganser</a>
+      <nav aria-label="Page sections">
+        <a href="#about">about</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
+        <a href="#education">education</a>
+        <a href="#certifications">certs</a>
       </nav>
-      <div class="nav-actions">
-        <ul class="social-links">
-          <li>
-            <a title="GitHub" target="_blank" rel="noopener" href="https://github.com/mrganser">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a title="LinkedIn" target="_blank" rel="noopener" href="https://linkedin.com/in/german-suarez-rodriguez">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M8 11v5" />
-                <path d="M8 8v.01" />
-                <path d="M12 16v-5" />
-                <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-                <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/mrganser">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a id="stack-overflow-link" title="StackOverflow" target="_blank" rel="noopener"
-              href="https://stackoverflow.com/users/4056222/mrganser">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
-                <path d="M8 16h8" />
-                <path d="M8.322 12.582l7.956 .836" />
-                <path d="M8.787 9.168l7.826 1.664" />
-                <path d="M10.096 5.764l7.608 2.472" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <label for="darkmode-switch" class="darkmode-toggle" title="Toggle dark mode">
-          <span class="icon-sun" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-              <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-            </svg>
-          </span>
-          <span class="icon-moon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-            </svg>
-          </span>
-        </label>
-      </div>
+      <input type="checkbox" id="theme-switch" class="sr-only" aria-label="Toggle light/dark theme">
+      <label for="theme-switch" class="theme-toggle" title="Toggle theme"></label>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-content">
-        <p class="hero-label">Principal Software Engineer</p>
-        <h1 class="hero-name">Germán<br>Suárez</h1>
-        <div class="hero-accent" aria-hidden="true"></div>
-        <p class="hero-tagline">
-          15+ years building web applications.<br>
-          Engineering leader, perfectionist craftsman, and eternal optimist.
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="wrap">
+        <p class="prompt">whoami</p>
+        <h1>Germán Suárez</h1>
+        <p class="role">Principal Software Engineer<span class="cursor" aria-hidden="true"></span></p>
+        <p class="lead">
+          15+ years building web applications. Engineering leader, perfectionist craftsman, and eternal optimist.
         </p>
-        <div class="hero-actions">
-          <a href="cv/German_Suarez_CV_EN.pdf" target="_blank" class="btn btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
-              <polyline points="7 11 12 16 17 11" />
-              <line x1="12" y1="4" x2="12" y2="16" />
-            </svg>
-            Download CV
-          </a>
-          <a href="#about" class="btn btn-ghost">Learn more</a>
+        <dl class="kv">
+          <dt>stack</dt>
+          <dd>TypeScript, React, Node.js, microservices</dd>
+          <dt>focus</dt>
+          <dd>scalable systems, tech debt under control, AI in team workflows</dd>
+          <dt>based</dt>
+          <dd>Canary Islands, Spain (remote)</dd>
+        </dl>
+        <div class="actions">
+          <a class="btn" href="cv/German_Suarez_CV_EN.pdf" target="_blank">./download-cv.pdf</a>
+          <a class="btn ghost" href="https://github.com/mrganser" target="_blank" rel="noopener">github</a>
+          <a class="btn ghost" href="https://linkedin.com/in/german-suarez-rodriguez" target="_blank"
+            rel="noopener">linkedin</a>
         </div>
       </div>
     </section>
 
-    <!-- Metrics -->
-    <section class="metrics" aria-label="Key achievements">
-      <div class="metrics-inner">
-        <div class="metric">
-          <strong class="metric-value">15+ years</strong>
-          <span class="metric-label">From intern to Principal Engineer</span>
-        </div>
-        <div class="metric">
-          <strong class="metric-value"><span class="no-break">Hands-on</span> leader</strong>
-          <span class="metric-label">Mentoring teams while writing production code</span>
-        </div>
-        <div class="metric">
-          <strong class="metric-value">AI in practice</strong>
-          <span class="metric-label">Bringing AI into team workflows and processes</span>
-        </div>
-        <div class="metric">
-          <strong class="metric-value"><span class="no-break">Long-term</span> builder</strong>
-          <span class="metric-label">Systems that scale, tech debt under control</span>
-        </div>
+    <section id="about" class="about">
+      <div class="wrap">
+        <h2>cat <span>about.md</span></h2>
+        <p>
+          Principal engineer working in TypeScript, with 15+ years building web applications. Over that time I have
+          worked on microservices, event-driven systems and CI/CD, and spent a few years in engineering management
+          across product, design and tech.
+        </p>
+        <p>
+          I am still hands-on and write production code every day. AI is part of my daily workflow, from generation
+          and review to exploring architecture, and the quality bar stays the same. I care about covering every
+          scenario while keeping things simple, and I like helping teammates grow.
+        </p>
+        <ul class="stats">
+          <li><b>15+ years</b>From intern to Principal Engineer</li>
+          <li><b>Hands-on leader</b>Mentoring teams while writing production code</li>
+          <li><b>AI in practice</b>Bringing AI into team workflows and processes</li>
+          <li><b>Long-term builder</b>Systems that scale, tech debt under control</li>
+        </ul>
       </div>
     </section>
 
-    <!-- About -->
-    <section class="section reveal" id="about">
-      <div class="section-inner">
-        <h2 class="section-title">About me</h2>
-        <div class="about-content">
-          <p>
-            I am <strong>Germán</strong>, a <strong>principal software engineer</strong> with over fifteen years
-            of experience building web applications. I started as a J2EE programmer but nowadays I work with the
-            JavaScript / TypeScript ecosystem and I love it. I have also taken functions of Engineering Manager
-            coordinating product, design and tech functions.
+    <section id="experience">
+      <div class="wrap">
+        <h2>git log <span>--career</span></h2>
+
+        <article class="entry">
+          <p class="meta">2019-05 to present</p>
+          <h3>Senior Software Engineer &rarr; Principal Software Engineer</h3>
+          <p class="org">Insendi (EdTech startup &rarr; scaleup)</p>
+          <ul>
+            <li>
+              Led development across two teams and over 10 engineers, cutting development cycle time by 50% and
+              improving average API response time by 35%, while keeping employee turnover close to zero.
+            </li>
+            <li>
+              Helped transform a startup into a mature scaleup by introducing agile methodologies and a fully remote
+              culture, and by evolving its main product through roadmap decisions, including the implementation of
+              new AI-driven features such as quiz content generation.
+            </li>
+            <li>
+              Scaled the platform to handle thousands of students concurrently through microservices, caching and
+              asynchronous event-driven communication.
+            </li>
+            <li>
+              Led the creation of a new product, making product decisions from a technical perspective and defining
+              its roadmap in collaboration with management, product and design. Released the MVP in six months.
+            </li>
+            <li>
+              Introduced development practices such as feature flags, trunk-based development and a monorepo
+              architecture, and led major refactoring and migration initiatives.
+            </li>
+            <li>
+              Improved CI/CD, halving deployment times and reducing errors, with zero unplanned downtime for three
+              years.
+            </li>
+            <li>
+              Acted as an engineering manager, mentoring several junior engineers who advanced to senior and team
+              lead positions. Rated the company&rsquo;s top leader in 360&deg; surveys, scoring above 4.8/5 with 100%
+              participation.
+            </li>
+            <li>
+              Created an employee handbook that reduced onboarding time and was rated 4.9/5 by employees.
+            </li>
+          </ul>
+          <div class="tags">
+            <span>typescript</span><span>react</span><span>next.js</span><span>node.js</span><span>microservices</span><span>event-driven</span><span>monorepo</span><span>ci/cd</span><span>postgresql</span><span>docker</span><span>aws</span><span>redis</span><span>ai</span><span>leadership</span><span>product</span><span>lti</span><span>xapi</span><span>terraform</span><span>activemq</span><span>storybook</span><span>datadog</span><span>jest</span><span>react-testing-library</span><span>playwright</span>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="meta">2011-04 to 2019-05</p>
+          <h3>Intern &rarr; Senior Software Engineer</h3>
+          <p class="org">Contactel Teleservicios (Regional emergency management company)</p>
+          <ul>
+            <li>
+              Gradually took on responsibilities, including requirements gathering, analysis and team-based project
+              development.
+            </li>
+            <li>
+              Later led two development teams, implementing agile methodologies and consistently delivering projects
+              on time to a high standard.
+            </li>
+            <li>
+              Built and scaled the emergency management platform behind the Canary Islands&rsquo; 112 service,
+              covering a population of over 2 million.
+            </li>
+          </ul>
+          <div class="tags">
+            <span>java</span><span>j2ee</span><span>jsf</span><span>html5</span><span>css3</span><span>javascript</span><span>angularjs</span><span>graphql</span><span>node.js</span><span>tomcat</span><span>primefaces</span><span>oracle</span><span>agile</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <h2>ls <span>-l projects/</span></h2>
+        <p class="group">work/</p>
+        <ul class="projects">
+          <li class="project">
+            <h3>Insendi LMS</h3>
+            <p>
+              Learning platform serving thousands of concurrent students. Full-stack TypeScript microservices with
+              support for LTI and xAPI standards.
+            </p>
+            <div class="tags">
+              <span>typescript</span><span>node.js</span><span>react</span><span>next.js</span><span>microservices</span><span>lti</span><span>xapi</span>
+            </div>
+          </li>
+          <li class="project">
+            <h3>112SGE</h3>
+            <p>
+              Emergency management web app behind the Canary Islands&rsquo; 112 service, covering a population of
+              over 2 million. Full-stack JavaScript.
+            </p>
+            <div class="tags"><span>javascript</span><span>angularjs</span><span>node.js</span></div>
+          </li>
+        </ul>
+        <p class="group">side/</p>
+        <ul class="projects">
+          <li class="project">
+            <h3>
+              <a href="/meeplebee/">MeepleBee</a>
+              <span class="links">
+                <a href="https://play.google.com/store/apps/details?id=com.mrganser.meeplebee" target="_blank"
+                  rel="noopener">google play</a>
+                <a href="https://apps.apple.com/app/id6759684074" target="_blank" rel="noopener">app store</a>
+              </span>
+            </h3>
+            <p>
+              A board game companion app with +12 tools for tabletop gaming: dice rollers, score trackers, timers,
+              and more. Available on Android and iOS.
+            </p>
+            <div class="tags"><span>react-native</span><span>typescript</span><span>expo</span></div>
+          </li>
+          <li class="project">
+            <h3>
+              ChatterBox
+              <span class="links"><a href="https://github.com/mrganser/chatterbox" target="_blank"
+                  rel="noopener">source</a></span>
+            </h3>
+            <p>A web application to host video chat rooms up to 5 people using WebRTC technology.</p>
+            <div class="tags">
+              <span>next.js</span><span>typescript</span><span>react</span><span>tailwind</span><span>webrtc</span>
+            </div>
+          </li>
+          <li class="project">
+            <h3>
+              MagicBox
+              <span class="links"><a href="https://github.com/mrganser/magicbox" target="_blank"
+                  rel="noopener">source</a></span>
+            </h3>
+            <p>
+              A website that allows sharing media content between friends in real time, even using the YouTube API
+              to play videos at the same time.
+            </p>
+            <div class="tags">
+              <span>next.js</span><span>typescript</span><span>react</span><span>tailwind</span><span>websockets</span>
+            </div>
+          </li>
+          <li class="project">
+            <h3>
+              FileCloner
+              <span class="links"><a href="https://github.com/mrganser/filecloner" target="_blank"
+                  rel="noopener">source</a></span>
+            </h3>
+            <p>Made on Electron, this desktop app lets you clone files in a certain way, choosing from some
+              parameters.</p>
+            <div class="tags"><span>typescript</span><span>react</span><span>tailwind</span><span>electron</span></div>
+          </li>
+          <li class="project">
+            <h3>
+              CVTemplate
+              <span class="links"><a href="https://github.com/mrganser/cv-template" target="_blank"
+                  rel="noopener">source</a></span>
+            </h3>
+            <p>This very website is open source too. Plain HTML and CSS, no JavaScript.</p>
+            <div class="tags"><span>html5</span><span>css3</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <h2>cat <span>education.log</span></h2>
+
+        <article class="entry">
+          <p class="meta">2014-09 to 2017-09</p>
+          <h3>Master's degree in Computer Science Engineering</h3>
+          <p class="org">Universidad de Las Palmas de Gran Canaria</p>
+          <p class="detail">
+            <strong>Specialization:</strong> Web technologies and digital businesses.<br>
+            <strong>Thesis:</strong> Developing a web application using WebRTC technologies.<br>
+            Graduated with Honors.
           </p>
-          <p>
-            I am a hands-on engineer who writes production code every day. I integrate AI-assisted development
-            into my workflow, from code generation and review to architecture exploration, multiplying my output
-            while keeping quality high. I believe the best engineering leaders stay close to the code.
+        </article>
+
+        <article class="entry">
+          <p class="meta">2010-09 to 2011-12</p>
+          <h3>Bachelor's degree in Computer Science Engineering</h3>
+          <p class="org">Universidad de Las Palmas de Gran Canaria</p>
+          <p class="detail">
+            <strong>Thesis:</strong> Developing a program that checks the effectiveness, efficiency and uniqueness
+            of students' programming exercises using the reflexive Java API.
           </p>
-          <p>
-            I am a perfectionist in anything I do. I stand out for my bug-free code and for making sure all the
-            scenarios are covered while keeping simplicity and avoiding unnecessary complexities. I am a very
-            positive thinking person and I am not easily discouraged, I always try to motivate my teammates.
+        </article>
+
+        <article class="entry">
+          <p class="meta">2007-09 to 2010-06</p>
+          <h3>University degree in Information Systems Engineering</h3>
+          <p class="org">Universidad de Las Palmas de Gran Canaria, University of Southern Denmark (Erasmus
+            semester)</p>
+          <p class="detail">
+            First in class. Graduated with Honors.<br>
+            Regional 2009 Scholarship for Academic Excellence.
           </p>
-        </div>
+        </article>
+
+        <article class="entry">
+          <p class="meta">2005-09 to 2007-06</p>
+          <h3>Secondary school</h3>
+          <p class="org">I.E.S Politécnico Las Palmas</p>
+          <p class="detail">Graduated with Honors.</p>
+        </article>
       </div>
     </section>
 
-    <!-- Experience -->
-    <section class="section reveal" id="experience">
-      <div class="section-inner">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Senior Software Engineer &rarr; Principal Software Engineer</h3>
-                <time class="timeline-date">May 2019 — Present</time>
-              </div>
-              <p class="timeline-company">Insendi (EdTech startup &rarr; scaleup)</p>
-              <ul class="timeline-details">
-                <li>
-                  Helped transform a startup into a mature scaleup by introducing agile methodologies and a fully
-                  remote culture, and by evolving its main product through roadmap decisions, including the
-                  implementation of new AI-driven features such as quiz content generation.
-                </li>
-                <li>
-                  Scaled the platform to handle thousands of students concurrently through microservices, caching
-                  and asynchronous event-driven communication.
-                </li>
-                <li>
-                  Led the creation of a new product, making product decisions from a technical perspective and
-                  defining its roadmap in collaboration with management, product and design. Released the MVP in
-                  six months.
-                </li>
-                <li>
-                  Introduced development practices such as feature flags, trunk-based development and a monorepo
-                  architecture, and led major refactoring and migration initiatives.
-                </li>
-                <li>
-                  Improved CI/CD, halving deployment times and reducing errors, with zero unplanned downtime for
-                  three years.
-                </li>
-                <li>
-                  Acted as an engineering manager, mentoring several junior engineers who advanced to senior and
-                  team lead positions. Rated the company&rsquo;s top leader in 360&deg; surveys, scoring above 4.8/5
-                  with 100% participation.
-                </li>
-                <li>
-                  Created an employee handbook that reduced onboarding time and was rated 4.9/5 by employees.
-                </li>
-              </ul>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Intern &rarr; Senior Software Engineer</h3>
-                <time class="timeline-date">April 2011 — May 2019</time>
-              </div>
-              <p class="timeline-company">Contactel Teleservicios (Regional emergency management company)</p>
-              <ul class="timeline-details">
-                <li>
-                  Gradually took on responsibilities, including requirements gathering, analysis and team-based
-                  project development.
-                </li>
-                <li>
-                  Later led two development teams, implementing agile methodologies and consistently delivering
-                  projects on time to a high standard.
-                </li>
-                <li>
-                  Built and scaled the emergency management platform behind the Canary Islands&rsquo; 112 service,
-                  covering a population of over 2 million.
-                </li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="section reveal" id="portfolio">
-      <div class="section-inner">
-        <h2 class="section-title">Portfolio</h2>
-        <div class="project-grid">
-          <article class="project-card featured">
-            <figure class="project-image">
-              <img alt="MeepleBee — board game companion app" src="img/portfolio/meeplebee.png" loading="lazy"
-                width="600" height="300">
-              <a class="project-link" target="_blank" rel="noopener" title="MeepleBee on Google Play"
-                href="https://play.google.com/store/apps/details?id=com.mrganser.meeplebee">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M4 3.71v16.58a.7 .7 0 0 0 1.05 .606l14.622 -8.42a.55 .55 0 0 0 0 -.953l-14.622 -8.419a.7 .7 0 0 0 -1.05 .607l0 -.001" />
-                  <path d="M15 9l-10.5 11.5" />
-                  <path d="M4.5 3.5l10.5 11.5" />
-                </svg>
-              </a>
-              <a class="project-link" target="_blank" rel="noopener" title="MeepleBee on the App Store"
-                href="https://apps.apple.com/app/id6759684074" style="right: 3.25rem;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                  <path d="M8 16l1.106 -1.99m1.4 -2.522l2.494 -4.488" />
-                  <path d="M7 14h5m2.9 0h2.1" />
-                  <path d="M16 16l-2.51 -4.518m-1.487 -2.677l-1 -1.805" />
-                </svg>
-              </a>
-            </figure>
-            <div class="project-body">
-              <h3><a href="/meeplebee/">MeepleBee</a></h3>
-              <p>
-                A board game companion app with +12 tools for tabletop gaming:
-                dice rollers, score trackers, timers, and more.
-                Available on Android and iOS.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-tag">React Native</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Expo</span>
-              </div>
-              <a href="/meeplebee/" class="project-page-link">
-                Learn more
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14" />
-                  <path d="M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-          </article>
-          <article class="project-card">
-            <figure class="project-image">
-              <img alt="ChatterBox — video chat rooms" src="img/portfolio/1.webp" loading="lazy" width="600"
-                height="300">
-              <a class="project-link" target="_blank" rel="noopener" title="ChatterBox source code"
-                href="https://github.com/mrganser/chatterbox">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                </svg>
-              </a>
-            </figure>
-            <div class="project-body">
-              <h3>ChatterBox</h3>
-              <p>A web application to host video chat rooms up to 5 people using WebRTC technology.</p>
-              <div class="tech-stack">
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Tailwind</span>
-                <span class="tech-tag">WebRTC</span>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <figure class="project-image">
-              <img alt="MagicBox — real-time media sharing" src="img/portfolio/2.webp" loading="lazy" width="600"
-                height="300">
-              <a class="project-link" target="_blank" rel="noopener" title="MagicBox source code"
-                href="https://github.com/mrganser/magicbox">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                </svg>
-              </a>
-            </figure>
-            <div class="project-body">
-              <h3>MagicBox</h3>
-              <p>
-                A website that allows sharing media content between friends in real time, even using the YouTube
-                API to play videos at the same time.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Tailwind</span>
-                <span class="tech-tag">WebSockets</span>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <figure class="project-image">
-              <img alt="FileCloner — desktop file cloning tool" src="img/portfolio/3.webp" loading="lazy" width="600"
-                height="300">
-              <a class="project-link" target="_blank" rel="noopener" title="FileCloner source code"
-                href="https://github.com/mrganser/filecloner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                </svg>
-              </a>
-            </figure>
-            <div class="project-body">
-              <h3>FileCloner</h3>
-              <p>Made on Electron, this desktop app lets you clone files in a certain way, choosing from some
-                parameters.</p>
-              <div class="tech-stack">
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Tailwind</span>
-                <span class="tech-tag">Electron</span>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <figure class="project-image">
-              <img alt="CVTemplate — this portfolio website" src="img/portfolio/4.webp" loading="lazy" width="600"
-                height="300">
-              <a class="project-link" target="_blank" rel="noopener" title="CVTemplate source code"
-                href="https://github.com/mrganser/cv-template">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                </svg>
-              </a>
-            </figure>
-            <div class="project-body">
-              <h3>CVTemplate</h3>
-              <p>This own website is open source too. Made just with HTML5, CSS3 Animations, FlexBox and CSS Grid.
-                No JavaScript.</p>
-              <div class="tech-stack">
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">CSS3</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="section reveal" id="education">
-      <div class="section-inner">
-        <h2 class="section-title">Education</h2>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Master's degree in Computer Science Engineering</h3>
-                <time class="timeline-date">Sep 2014 — Sep 2017</time>
-              </div>
-              <p class="timeline-company">Universidad de Las Palmas de Gran Canaria</p>
-              <p class="timeline-detail">
-                <strong>Specialization:</strong> Web technologies and digital businesses.<br>
-                <strong>Thesis:</strong> Developing a web application using WebRTC technologies.<br>
-                Graduated with Honors.
-              </p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Bachelor's degree in Computer Science Engineering</h3>
-                <time class="timeline-date">Sep 2010 — Dec 2011</time>
-              </div>
-              <p class="timeline-company">Universidad de Las Palmas de Gran Canaria</p>
-              <p class="timeline-detail">
-                <strong>Thesis:</strong> Developing a program that checks the effectiveness, efficiency and
-                uniqueness of student's programming exercises using the reflexive Java API.
-              </p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>University degree in Information Systems Engineering</h3>
-                <time class="timeline-date">Sep 2007 — Jun 2010</time>
-              </div>
-              <p class="timeline-company">Universidad de Las Palmas de Gran Canaria<br>University of Southern
-                Denmark (Erasmus semester)</p>
-              <p class="timeline-detail">
-                First in class. Graduated with Honors.<br>
-                Regional 2009 Scholarship for Academic Excellence.
-              </p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Secondary school</h3>
-                <time class="timeline-date">Sep 2005 — Jun 2007</time>
-              </div>
-              <p class="timeline-company">I.E.S Politécnico Las Palmas</p>
-              <p class="timeline-detail">Graduated with Honors.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="section reveal" id="certifications">
-      <div class="section-inner">
-        <h2 class="section-title">Certifications</h2>
-        <div class="cert-grid">
-          <div class="cert-item">
-            <span class="cert-year">2026</span>
-            <span>Claude Code in Action</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-year">2026</span>
-            <span>Claude Code 101</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-year">2018</span>
-            <span>Scrum Master certificate PSM-I</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-year">2017</span>
-            <span>Functional Programming in Erlang</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-year">2016</span>
-            <span>Management systems and GDPR</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-year">2016</span>
-            <span>ITIL Foundation Certificate in IT Service Management</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-year">2015</span>
-            <span>Javascript, AngularJS, NodeJS</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-year">2014</span>
-            <span>Certified ISO/IEC 27001 Auditor</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-year">2013</span>
-            <span>Liferay</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-year">2011</span>
-            <span>HTML5 &amp; CSS3</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-year">2010</span>
-            <span>CISCO CCNA Routing Protocols and Concepts</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-year">2010</span>
-            <span>CISCO CCNA Network Fundamentals</span>
-          </div>
-        </div>
+    <section id="certifications">
+      <div class="wrap">
+        <h2>ls <span>certs/</span></h2>
+        <ul class="certs">
+          <li><time>2026</time>Claude Code in Action</li>
+          <li><time>2026</time>Claude Code 101</li>
+          <li><time>2018</time>Scrum Master certificate PSM-I</li>
+          <li><time>2017</time>Functional Programming in Erlang</li>
+          <li><time>2016</time>Management systems and GDPR</li>
+          <li><time>2016</time>ITIL Foundation Certificate in IT Service Management</li>
+          <li><time>2015</time>JavaScript, AngularJS, NodeJS</li>
+          <li><time>2014</time>Certified ISO/IEC 27001 Auditor</li>
+          <li><time>2013</time>Liferay</li>
+          <li><time>2011</time>HTML5 &amp; CSS3</li>
+          <li><time>2010</time>CISCO CCNA Routing Protocols and Concepts</li>
+          <li><time>2010</time>CISCO CCNA Network Fundamentals</li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>Built with HTML &amp; CSS. Zero JavaScript.</p>
+  <footer>
+    <div class="wrap">
+      <p>Built with HTML &amp; CSS. Zero JavaScript.</p>
+      <div class="links">
+        <a href="https://github.com/mrganser" target="_blank" rel="noopener">github</a>
+        <a href="https://stackoverflow.com/users/4056222/mrganser" target="_blank" rel="noopener">stackoverflow</a>
+        <a href="https://twitter.com/mrganser" target="_blank" rel="noopener">twitter</a>
+        <a href="https://linkedin.com/in/german-suarez-rodriguez" target="_blank" rel="noopener">linkedin</a>
+      </div>
+    </div>
   </footer>
 </body>
 
