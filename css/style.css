@@ -1,52 +1,44 @@
-/* Terminal-style portfolio. Zero JavaScript: dark mode is a CSS-only checkbox. */
+/* Terminal-style portfolio. Zero JavaScript: dark mode is a CSS-only checkbox.
+   Colours come from the logo: navy ground, teal accent, one yellow highlight
+   (the CV button, cursor and selection). Dark uses the logo's own hues
+   lightened for contrast; light darkens them. Mono carries the shell
+   (prompts, labels, metadata); a humanist sans carries long prose. */
 
+/* Dark by default, light when the system asks for it; the checkbox flips either. */
 :root {
-  --bg: #0d1117;
-  --bg-alt: #161b22;
-  --fg: #c9d1d9;
-  --dim: #8b949e;
-  --line: #30363d;
-  --accent: #3fb950;
-  --accent-2: #58a6ff;
-  --warn: #d29922;
-  --mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  color-scheme: dark;
+  --bg: light-dark(oklch(97.5% 0.006 240), oklch(17% 0.02 245));
+  --bg-alt: light-dark(oklch(94% 0.01 240), oklch(21% 0.022 245));
+  --fg: light-dark(oklch(26% 0.03 245), oklch(92% 0.008 240));
+  --dim: light-dark(oklch(46% 0.03 240), oklch(72% 0.02 235));
+  --line: light-dark(oklch(85% 0.012 240), oklch(32% 0.025 245));
+  --accent: light-dark(oklch(48% 0.09 190), oklch(76% 0.11 190));
+  --meta: light-dark(oklch(46% 0.08 90), oklch(84% 0.13 95));
+  --hl: oklch(87% 0.18 95);
+  --on-hl: oklch(26% 0.04 245);
+  --hl-edge: light-dark(oklch(26% 0.04 245), oklch(87% 0.18 95));
+  --hl-hover: light-dark(oklch(82% 0.18 95), oklch(91% 0.17 95));
+  --mark: light-dark(oklch(48% 0.09 190), oklch(87% 0.18 95));
+  --card-shadow: 0 0 0 1px light-dark(oklch(0 0 0 / 0.1), oklch(1 0 0 / 0.1)),
+    0 1px 2px -1px light-dark(oklch(0 0 0 / 0.06), transparent),
+    0 2px 4px light-dark(oklch(0 0 0 / 0.04), transparent);
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --prose: "Avenir Next", "Segoe UI", Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans", sans-serif;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: #fbfbf8;
-    --bg-alt: #f0efe9;
-    --fg: #24292f;
-    --dim: #6a737d;
-    --line: #d8d6cc;
-    --accent: #1a7f37;
-    --accent-2: #0550ae;
-    --warn: #9a6700;
+    color-scheme: light;
+  }
+
+  :root:has(#theme-switch:checked) {
+    color-scheme: dark;
   }
 }
 
-/* Checkbox flips whichever theme the system picked. */
-:root:has(#theme-switch:checked) {
-  --bg: #fbfbf8;
-  --bg-alt: #f0efe9;
-  --fg: #24292f;
-  --dim: #6a737d;
-  --line: #d8d6cc;
-  --accent: #1a7f37;
-  --accent-2: #0550ae;
-  --warn: #9a6700;
-}
-
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root:has(#theme-switch:checked) {
-    --bg: #0d1117;
-    --bg-alt: #161b22;
-    --fg: #c9d1d9;
-    --dim: #8b949e;
-    --line: #30363d;
-    --accent: #3fb950;
-    --accent-2: #58a6ff;
-    --warn: #d29922;
+    color-scheme: light;
   }
 }
 
@@ -58,6 +50,9 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -65,17 +60,19 @@ body {
   background: var(--bg);
   color: var(--fg);
   font: 15px/1.7 var(--mono);
-  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--bg);
+  background: var(--hl);
+  color: var(--on-hl);
 }
 
 a {
-  color: var(--accent-2);
+  color: var(--accent);
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
 }
 
 a:hover {
@@ -84,7 +81,8 @@ a:hover {
 }
 
 a:focus-visible,
-label:focus-visible {
+label:focus-visible,
+summary:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
@@ -109,6 +107,19 @@ strong {
   padding: 0 1.25rem;
 }
 
+/* Long prose: humanist sans, 68ch measure */
+.hero p.lead,
+.about p:not(.group),
+.entry li,
+.entry p.detail,
+.project p {
+  font-family: var(--prose);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  max-width: 68ch;
+  text-wrap: pretty;
+}
+
 /* Top bar */
 .bar {
   position: sticky;
@@ -123,14 +134,15 @@ strong {
 .bar .wrap {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  height: 3rem;
+  gap: 0 1.25rem;
+  min-height: 3rem;
 }
 
 .bar .brand {
   color: var(--accent);
   font-weight: 700;
   margin-right: auto;
+  padding-block: 0.75rem;
 }
 
 .bar nav {
@@ -140,6 +152,7 @@ strong {
 
 .bar nav a {
   color: var(--dim);
+  padding-block: 0.75rem;
 }
 
 .bar nav a:hover {
@@ -151,6 +164,10 @@ strong {
   cursor: pointer;
   color: var(--dim);
   user-select: none;
+  padding: 0.75rem 0.25rem;
+  transition-property: color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
 }
 
 #theme-switch:focus-visible+.theme-toggle {
@@ -162,12 +179,23 @@ strong {
   color: var(--fg);
 }
 
+/* The label names the theme you would switch to. Default is dark. */
 .theme-toggle::before {
-  content: "[dark]";
+  content: "[light]";
 }
 
 :root:has(#theme-switch:checked) .theme-toggle::before {
-  content: "[light]";
+  content: "[dark]";
+}
+
+@media (prefers-color-scheme: light) {
+  .theme-toggle::before {
+    content: "[dark]";
+  }
+
+  :root:has(#theme-switch:checked) .theme-toggle::before {
+    content: "[light]";
+  }
 }
 
 /* Hero */
@@ -176,8 +204,11 @@ strong {
   border-top: 0;
 }
 
+/* Same prompt voice as the section headings */
 .prompt {
-  font-size: 1rem;
+  font-size: clamp(1.25rem, 3.4vw, 1.5rem);
+  line-height: 1.3;
+  font-weight: 700;
   color: var(--dim);
   margin: 0;
 }
@@ -194,6 +225,7 @@ strong {
   margin: 1rem 0 0.25rem -0.04em;
   /* optical fix: cancel the "G" left side bearing at display size */
   letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 .hero .role {
@@ -205,7 +237,7 @@ strong {
   display: inline-block;
   width: 0.6em;
   height: 1.1em;
-  background: var(--accent);
+  background: var(--mark);
   vertical-align: text-bottom;
   animation: blink 1.1s steps(1) infinite;
 }
@@ -220,6 +252,7 @@ strong {
   text-wrap: balance;
   margin: 0 0 1.5rem;
   color: var(--dim);
+  font-size: 1.1875rem;
 }
 
 .kv {
@@ -230,7 +263,7 @@ strong {
 }
 
 .kv dt {
-  color: var(--warn);
+  color: var(--meta);
 }
 
 .kv dd {
@@ -245,20 +278,44 @@ strong {
 
 .btn {
   display: inline-block;
-  padding: 0.4rem 0.9rem;
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--hl-edge);
+  background: var(--hl);
+  color: var(--on-hl);
   font-weight: 700;
+  transition-property: background-color, border-color, color, box-shadow, scale;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+}
+
+.btn:active {
+  scale: 0.96;
 }
 
 .btn:hover {
+  text-decoration: none;
+}
+
+/* Primary: stays yellow, brightens and gains a soft ring */
+.btn:not(.outline):not(.ghost):hover {
+  background: var(--hl-hover);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--hl) 35%, transparent);
+}
+
+.btn.outline {
+  border-color: var(--accent);
+  background: none;
+  color: var(--accent);
+}
+
+.btn.outline:hover {
   background: var(--accent);
   color: var(--bg);
-  text-decoration: none;
 }
 
 .btn.ghost {
   border-color: var(--line);
+  background: none;
   color: var(--dim);
   font-weight: 400;
 }
@@ -276,10 +333,12 @@ section {
 }
 
 section>.wrap>h2 {
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 0 0 1.5rem;
+  font-size: clamp(1.25rem, 3.4vw, 1.5rem);
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0 0 1.75rem;
   color: var(--dim);
+  text-wrap: balance;
 }
 
 section>.wrap>h2::before {
@@ -292,38 +351,34 @@ section>.wrap>h2 span {
   color: var(--fg);
 }
 
-.about p {
+.about p:not(.group) {
   margin: 0 0 1rem;
 }
 
+/* Key figures, laid out like shell output */
 .stats {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0 0;
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: max-content 1fr;
+  gap: 0.35rem 1.25rem;
+  font-size: 14px;
 }
 
-.stats li {
-  background: var(--bg-alt);
-  border: 1px solid var(--line);
-  padding: 0.75rem 0.9rem;
-  font-size: 13px;
-  color: var(--dim);
-  line-height: 1.5;
-}
-
-.stats b {
-  display: block;
+.stats dt {
   color: var(--accent);
-  font-size: 15px;
-  margin-bottom: 0.15rem;
+  font-weight: 700;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.stats dd {
+  margin: 0;
+  color: var(--dim);
 }
 
 /* Log entries (experience, education) */
 .entry {
-  padding: 0 0 1.75rem 1.25rem;
+  padding: 0 0 2rem 1.25rem;
   border-left: 1px solid var(--line);
   position: relative;
   margin-left: 0.3rem;
@@ -340,25 +395,29 @@ section>.wrap>h2 span {
   top: 0.6rem;
   width: 8px;
   height: 8px;
-  background: var(--accent);
+  background: var(--mark);
   border-radius: 50%;
 }
 
 .entry .meta {
-  color: var(--warn);
+  color: var(--meta);
   font-size: 13px;
   margin: 0;
+  font-variant-numeric: tabular-nums;
 }
 
 .entry h3 {
-  font-size: 1rem;
+  font-size: 1.125rem;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.4;
+  text-wrap: balance;
 }
 
 .entry .org {
   color: var(--dim);
-  margin: 0 0 0.5rem;
+  margin: 0.15rem 0 0.75rem;
+  font-size: 13px;
+  text-wrap: balance;
 }
 
 .entry ul {
@@ -370,13 +429,18 @@ section>.wrap>h2 span {
 .entry li {
   position: relative;
   padding-left: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
 }
 
 .entry li::before {
   content: "+";
   position: absolute;
   left: 0.25rem;
+  color: var(--accent);
+  font-family: var(--mono);
+}
+
+.entry li strong {
   color: var(--accent);
 }
 
@@ -404,25 +468,20 @@ section>.wrap>h2 span {
 }
 
 .project {
-  border: 1px solid var(--line);
   background: var(--bg-alt);
+  box-shadow: var(--card-shadow);
   padding: 1rem 1.15rem;
-  transition: border-color 0.15s;
-}
-
-.project:hover {
-  border-color: var(--accent);
 }
 
 .project h3 {
   margin: 0 0 0.25rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .project-head {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1rem;
+  gap: 0 1rem;
   align-items: baseline;
   margin: 0 0 0.25rem;
 }
@@ -439,6 +498,10 @@ section>.wrap>h2 span {
   gap: 1rem;
 }
 
+.project-head .links a {
+  padding-block: 0.7rem;
+}
+
 .project p {
   margin: 0 0 0.6rem;
   color: var(--dim);
@@ -452,12 +515,12 @@ section>.wrap>h2 span {
 }
 
 .tags span {
-  color: var(--accent);
+  color: var(--dim);
 }
 
 .tags span::before {
   content: "#";
-  opacity: 0.6;
+  color: var(--accent);
 }
 
 .entry .tags {
@@ -474,12 +537,14 @@ section>.wrap>h2 span {
 .certs li {
   display: flex;
   gap: 1rem;
-  padding: 0.15rem 0;
+  padding: 0.25rem 0;
+  max-width: 68ch;
 }
 
 .certs time {
-  color: var(--warn);
+  color: var(--meta);
   flex: none;
+  font-variant-numeric: tabular-nums;
 }
 
 /* Footer */
@@ -493,6 +558,7 @@ footer {
 footer .wrap {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 0.75rem 1.5rem;
 }
@@ -507,7 +573,12 @@ footer .links {
   flex-wrap: wrap;
 }
 
+footer .links a {
+  padding-block: 0.7rem;
+}
+
 @media (max-width: 600px) {
+  /* Brand and theme toggle only; the page is short enough to scroll. */
   .bar nav {
     display: none;
   }
@@ -518,6 +589,19 @@ footer .links {
 
   .kv dd {
     margin-bottom: 0.5rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .stats dt {
+    text-align: left;
+  }
+
+  .stats dd {
+    margin-bottom: 0.6rem;
   }
 
   .project-head .links {
@@ -533,5 +617,9 @@ footer .links {
 
   .cursor {
     animation: none;
+  }
+
+  .btn:active {
+    scale: none;
   }
 }
