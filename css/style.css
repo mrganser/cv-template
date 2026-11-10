@@ -578,6 +578,7 @@ footer .links a {
 }
 
 @media (max-width: 600px) {
+
   /* Brand and theme toggle only; the page is short enough to scroll. */
   .bar nav {
     display: none;
